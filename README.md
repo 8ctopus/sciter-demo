@@ -31,9 +31,16 @@ This doesn't work.
 Use this instead:
 
 ```html
-document.$("#info").onclick = function () {
+// option 1
+document.$("#info").onclick = log;
+
+// option 2
+document.on("click", "button#info", log);
+
+function log()
+{
     console.log('test');
-};
+}
 
 <button #info>info</button>
 ```
