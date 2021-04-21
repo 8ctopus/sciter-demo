@@ -20,6 +20,20 @@ It showcases some of the sciter features I find interesting, namely:
 
 # sciter caveats
 
+## html ids and classes
+
+Consider this button:
+
+``` html
+<button id="info" class="blue">info</button>
+```
+
+There's is a shorter notation.
+
+``` html
+<button #info .blue>info</button>
+```
+
 ## html events
 
 This doesn't work.
@@ -30,7 +44,7 @@ This doesn't work.
 
 Use this instead:
 
-```html
+```js
 // option 1
 document.$("#info").onclick = log;
 
