@@ -58,3 +58,11 @@ function log()
 
 <button #info>info</button>
 ```
+
+## css constants
+
+    https://sciter.com/developers/for-web-programmers/css-constants/
+
+## css variables
+
+    https://sciter.com/css-variables-support/
