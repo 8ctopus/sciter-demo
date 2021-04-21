@@ -63,6 +63,8 @@ html > header > window-buttons > window-button {
 
     behavior: clickable;
 
+    border-radius: 0;
+
     foreground-size: 11dip;
     foreground-repeat: no-repeat;
     foreground-position: 50% 50%;
@@ -107,7 +109,7 @@ html > header > window-buttons > window-button[role="window-minimize"] {
     foreground-image: url(path: M0 0 M0 5 H10 M10 10);
 }
 
-// macos specific settings
+// mac os specific settings
 @media platform == "OSX" {
     html > header > window-buttons {
         display: none;

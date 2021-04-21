@@ -7,20 +7,37 @@
     window-blurbehind="light"
     theme="light">
 <head>
+<link rel="stylesheet" href="css/base.css" type="text/css" />
 <link rel="stylesheet" href="css/window.css" type="text/css" />
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <!-- include window html -->
 <include src="window.html" media="sciter" />
 <body>
-<p> This is a sciter demo app based on the sciter calculator example. </p>
-<div id="container">
-    <div id="1" style="background: red;">
+    <p> This is a sciter demo app based on the sciter calculator example. </p>
+    <div id="container">
+        <div id="1" style="background: red;">
+        </div>
+        <div id="2" style="background: green;">
+        </div>
+        <div id="3" style="background: blue;">
+        </div>
     </div>
-    <div id="2" style="background: green;">
-    </div>
-    <div id="3" style="background: blue;">
-    </div>
-</div>
+
+    <a href="https://github.com">link to github</a>
+    <br />
+    <button>test</button>
+    <br />
+    <label for="edit">Firstname: </label>
+    <input type="text" id="edit" value="test">
+    <br />
+    <label>Gender: </label>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <br />
+    <input type="checkbox" name="terms" id="checkbox" value="">
+    <label for="checkbox">I agree to the terms</label>
 </body>
 </html>
