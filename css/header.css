@@ -28,13 +28,6 @@ html > header {
     flow: horizontal;
 
     height: window-caption-height;
-
-    color: #000;
-}
-
-// window header in dark theme
-html > header:theme(dark) {
-    color: #eee;
 }
 
 // window header icon

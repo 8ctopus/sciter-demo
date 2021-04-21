@@ -1,6 +1,6 @@
-# Sciter demo app
+# sciter demo app
 
-This is a (sciter)[https://sciter.com/] demo app based on the sciter calculator example.
+This is a [sciter](https://sciter.com/) demo app based on the sciter calculator example.
 
 ## get started
 
