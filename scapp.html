@@ -1,15 +1,35 @@
 <html
     window-frame="extended"
     window-resizable="true"
-    window-width="550dip"
-    window-height="400dip"
+    window-width="750dip"
+    window-height="900dip"
     window-icon="images/seastar.svg"
     window-blurbehind="light"
     theme="light">
 <head>
-<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/themes/default-unisex.css" type="text/css" />
 <link rel="stylesheet" href="css/window.css" type="text/css" />
 <link rel="stylesheet" href="css/style.css" type="text/css" />
+<script>
+
+document.on("input", "form#config", function(evt, form) {
+    // set document light/dark mode
+    document.attributes["theme"] = form.value.mode;
+
+    // get elements frame
+    var frame = document.$("frame");
+
+    // set frame theme
+    frame.attributes["content-style"] = form.value.theme;
+
+    // reload frame
+    frame.frame.loadFile(frame.frame.document.url());
+
+    // set frame theme UI size
+    frame.frame.document.attributes["ui-size"] = form.value.size;
+});
+
+</script>
 </head>
 <!-- include window html -->
 <include src="window.html" media="sciter" />
@@ -24,20 +44,27 @@
         </div>
     </div>
 
-    <a href="https://github.com">link to github</a>
-    <br />
-    <button>test</button>
-    <br />
-    <label for="edit">Firstname: </label>
-    <input type="text" id="edit" value="test">
-    <br />
-    <label>Gender: </label>
-    <label for="male">Male</label>
-    <input type="radio" name="gender" id="male" value="male">
-    <label for="female">Female</label>
-    <input type="radio" name="gender" id="female" value="female">
-    <br />
-    <input type="checkbox" name="terms" id="checkbox" value="">
-    <label for="checkbox">I agree to the terms</label>
+    <form #config .hbox>
+        <div .hbox>
+            Theme:
+            <select|dropdown(theme)>
+                <option value="default" selected value="css/themes/default-unisex.css">Sciter Unisex (default)</option>
+                <option value="flat" value="css/themes/windows-flat.css">Windows Flat</option>
+                <option value="material" value="css/themes/android-material.css">Android/Material</option>
+            </select>
+        </div>
+        <div .hbox>
+            Mode:
+            <button|radio(mode) checked value="light">Light</button>
+            <button|radio(mode) value="dark">Dark</button>
+        </div>
+        <div .hbox>
+            Size:
+            <button|radio(size) checked value="normal">Normal</button>
+            <button|radio(size) value="compact">Compact</button>
+        </div>
+    </form>
+
+    <frame src="elements.html" content-style="css/themes/default-unisex.css" />
 </body>
 </html>

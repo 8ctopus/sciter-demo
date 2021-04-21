@@ -1,3 +1,7 @@
+.hbox {
+    vertical-align: middle;
+}
+
 #container {
     flow: horizontal;
 }
