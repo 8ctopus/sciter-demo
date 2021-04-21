@@ -25,6 +25,45 @@ div {
 }
 
 </style>
+<script>
+
+document.$("#info").onclick = function () {
+    Window.this.modal(
+        <info>Hello world!</info>
+    );
+};
+
+document.$("#alert").onclick = function () {
+    Window.this.modal(
+        <alert caption="Alert">
+            <p>Don't worry!</p>
+            <p>It is just a demo</p>
+        </alert>
+    );
+};
+
+document.$("#error").onclick = function () {
+    Window.this.modal(
+        <error>
+            <p>Don't worry!</p>
+            <p>It is just a demo</p>
+        </error>
+    );
+};
+
+document.$("#custom").onclick = function () {
+    Window.this.modal(
+        <question>
+            <content>Be or not to be?</content>
+            <buttons>
+                <button id="yes" role="default-button">Yes</button>
+                <button id="no" role="cancel-button">No</button>
+            </buttons>
+        </question>
+    );
+};
+
+</script>
 </head>
 <body>
     <h2>button element</h2>
@@ -129,6 +168,14 @@ div {
     <div .hbox>
         <slider min=0 max=100 value=50 />
         <slider disabled min=0 max=100 value=50 />
+    </div>
+
+    <h2>message box</h2>
+    <div .hbox>
+        <button #info>info</button>
+        <button #alert>alert</button>
+        <button #error>error</button>
+        <button #custom>custom</button>
     </div>
 </body>
 </html>
