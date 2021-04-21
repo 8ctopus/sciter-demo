@@ -20,6 +20,33 @@ It showcases some of the sciter features I find interesting, namely:
 
 # sciter caveats
 
+## configure application window
+
+``` html
+<html
+    window-frame="extended"
+    window-resizable="true"
+    window-width="750dip"
+    window-height="1024dip"
+    window-icon="images/seastar.svg"
+    window-blurbehind="light"
+    theme="light">
+<head>
+...
+</head>
+<!-- header before the body tag -->
+<header>
+    <picture src="images/seastar.svg" role="window-icon" />
+    <window-caption role="window-caption">Sciter demo app</window-caption>
+    <window-buttons>
+        <window-button role="window-minimize"></window-button>
+        <window-button role="window-maximize"></window-button>
+        <window-button role="window-close"></window-button>
+    </window-buttons>
+</header>
+<body>
+```
+
 ## html ids and classes
 
 Consider this button:
@@ -32,6 +59,14 @@ There's is a shorter notation.
 
 ``` html
 <button #info .blue>info</button>
+```
+
+## include html
+
+Unlike vanila html, it's possible to include html inside another html document:
+
+``` html
+<include src="window.html" media="sciter" />
 ```
 
 ## html events
@@ -59,10 +94,10 @@ function log()
 <button #info>info</button>
 ```
 
-## css constants
+## css constants and variables
+
+Unlike vanilla css, css constants and variables are supported
 
     https://sciter.com/developers/for-web-programmers/css-constants/
-
-## css variables
-
     https://sciter.com/css-variables-support/
+
