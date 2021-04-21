@@ -17,3 +17,23 @@ It showcases some of the sciter features I find interesting, namely:
 - run `install.bat` to download the sciter binaries and library
 - run `scapp.exe`
 - to debug the app, run `inspector.exe`
+
+# sciter caveats
+
+## html events
+
+This doesn't work.
+
+```html
+<button #info onclick="console.log('test')">info</button>
+```
+
+Use this instead:
+
+```html
+document.$("#info").onclick = function () {
+    console.log('test');
+};
+
+<button #info>info</button>
+```
