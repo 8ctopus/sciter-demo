@@ -1,0 +1,130 @@
+html {
+    // window border
+    border: window-frame-width solid transparent;
+
+    // set accent-color variable
+    var(accent-color): window-accent-color;
+}
+
+// light theme
+html:theme(light) {
+    background: rgb(230,230,230);
+    color: #000;
+}
+
+// dark theme
+html:theme(dark) {
+    background: rgb(80,80,80);
+    color: #eee;
+}
+
+// window border color animation on focus
+html:owns-focus {
+    border-color: morph(color(accent-color), opacity: 50%);
+}
+
+// window header
+html > header {
+    flow: horizontal;
+
+    height: window-caption-height;
+
+    color: #000;
+}
+
+// window header in dark theme
+html > header:theme(dark) {
+    color: #eee;
+}
+
+// window header icon
+html > header > picture {
+    size: window-caption-height;
+    foreground-size: 16dip;
+}
+
+// window title
+html > header > window-caption {
+    width: *;
+
+    line-height: window-caption-height;
+
+    // make window caption adjust for smaller sizes
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+// window buttons
+html > header > window-buttons {
+    flow: horizontal;
+
+    width: max-content;
+    height: *;
+}
+
+// window button
+html > header > window-buttons > window-button {
+    width: window-button-width;
+    height: *;
+
+    behavior: clickable;
+
+    foreground-size: 11dip;
+    foreground-repeat: no-repeat;
+    foreground-position: 50% 50%;
+
+    stroke: currentcolor;
+    stroke-width: 1dip;
+
+    transition: background-color linear 100ms;
+}
+
+html > header > window-buttons > window-button:hover {
+    background: rgba(0,0,0,0.25);
+}
+
+// close button
+html > header > window-buttons > window-button[role="window-close"] {
+    stroke-width: 1.44dip;
+    foreground-image: url(path: M0 0 L10 10 M10 0 L0 10);
+}
+
+html > header > window-buttons > window-button[role="window-close"]:hover {
+    background: rgb(232,17,35);
+    stroke: #fff;
+}
+
+// maximize button
+html > header > window-buttons > window-button[role="window-maximize"] {
+    foreground-image: url(path: M0 0 H10 V10 H0 Z);
+}
+
+html[window-state="maximized"] > header > window-buttons > window-button[role="window-maximize"] {
+    foreground-image: url(path: M0 2 h8 v8 h-8 Z M2 2 v-2 h8 v8 h-2);
+}
+
+// hide window border when maximized
+html[window-state="maximized"] {
+    border-color: transparent;
+}
+
+// minimize button
+html > header > window-buttons > window-button[role="window-minimize"] {
+    foreground-image: url(path: M0 0 M0 5 H10 M10 10);
+}
+
+// macos specific settings
+@media platform == "OSX" {
+    html > header > window-buttons {
+        display: none;
+    }
+
+    html > header > picture {
+        display: none;
+    }
+
+    html > header > window-caption {
+        text-align: center;
+    }
+}

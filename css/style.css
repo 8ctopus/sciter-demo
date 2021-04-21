@@ -1,0 +1,8 @@
+#container {
+    flow: horizontal;
+}
+
+#container > div {
+    width: *;
+    height: 50dip;
+}
