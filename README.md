@@ -7,7 +7,7 @@ It showcases some of the sciter features I find interesting, namely:
 - javacript
 - themes
 
-# sciter examples uses:
+# sciter examples used:
 - sdk.js\samples\calc
 - sdk.js\samples.sciter\themes
 
@@ -18,7 +18,7 @@ It showcases some of the sciter features I find interesting, namely:
 - run `scapp.exe`
 - to debug the app, run `inspector.exe`
 
-# sciter caveats
+# sciter tips/caveats
 
 ## configure application window
 
@@ -46,6 +46,12 @@ It showcases some of the sciter features I find interesting, namely:
 </header>
 <body>
 ```
+
+## display flex
+
+Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
+
+    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
 
 ## html ids and classes
 
