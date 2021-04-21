@@ -24,6 +24,11 @@ div {
     flow: row(label,toggle);
 }
 
+plaintext {
+    width: *;
+    height: 100dip;
+}
+
 </style>
 <script>
 
@@ -61,6 +66,31 @@ document.$("#custom").onclick = function () {
             </buttons>
         </question>
     );
+};
+
+document.on("click", "button#plaintext", loadcss);
+
+//document.ready = loadcss;
+
+/**
+ * Load css from file into plaintext
+ * @return void
+ */
+async function loadcss() {
+    const plaintext = document.$("plaintext");
+
+    try {
+        var r = await fetch("css/style.css");
+
+        if (r.ok) {
+            plaintext.value = r.text();
+            return;
+        }
+
+    } catch (e) {
+    }
+
+    plaintext.value = url + " not found";
 };
 
 </script>
@@ -176,6 +206,12 @@ document.$("#custom").onclick = function () {
         <button #alert>alert</button>
         <button #error>error</button>
         <button #custom>custom</button>
+    </div>
+
+    <h2>plaintext</h2>
+    <div .hbox>
+        <plaintext type="text/css" />
+        <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
     </div>
 </body>
 </html>
