@@ -7,18 +7,11 @@
     window-blurbehind="light"
     theme="light">
 <head>
-<link rel="stylesheet" href="css/header.css" type="text/css" />
+<link rel="stylesheet" href="css/window.css" type="text/css" />
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
-<header>
-    <picture src="images/seastar.svg" role="window-icon" />
-    <window-caption role="window-caption">Sciter demo app</window-caption>
-    <window-buttons>
-        <window-button role="window-minimize"></window-button>
-        <window-button role="window-maximize"></window-button>
-        <window-button role="window-close"></window-button>
-    </window-buttons>
-</header>
+<!-- include window html -->
+<include src="window.html" media="sciter" />
 <body>
 <p> This is a sciter demo app based on the sciter calculator example. </p>
 <div id="container">
