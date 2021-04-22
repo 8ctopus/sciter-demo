@@ -7,18 +7,23 @@ It showcases some of the sciter features I find interesting, namely:
 - javacript
 - themes
 
-# sciter examples used:
+## sciter examples used:
 - sdk.js\samples\calc
 - sdk.js\samples.sciter\themes
 
 ## get started
 
 - git clone the repository
-- run `install.bat` to download the sciter binaries and library
-- run `scapp.exe`
-- to debug the app, run `inspector.exe`
+- run `install.bat` to download the latest sciter binaries and library
+- start `scapp.exe`
+- to refresh the app after changes to the html/css click `F5`
 
 # sciter tips/caveats
+
+## debug app
+- start `inspector.exe`
+- inside the `scapp.exe` window click `CTRL + SHIFT + I` to connect to the inspector
+- inside the `scapp.exe` window click `CTRL + SHIFT + left click` to inspect element in the inspector
 
 ## tutorials
 
@@ -29,10 +34,6 @@ It showcases some of the sciter features I find interesting, namely:
 sciter uses ECMAScript 2015 or ES6.
 
     https://www.javascripttutorial.net/es6/
-
-## inspect an element in inspector
-
-`CTRL + SHIFT + click` on element to inspect in inspector.
 
 ## configure application window
 
