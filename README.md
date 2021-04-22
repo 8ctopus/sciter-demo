@@ -131,9 +131,9 @@ Unlike vanilla css, css constants and variables are supported.
 
 Animations are supported using (Lottie)[https://lottiefiles.com/].
 
-## add fontawesome
+## fontawesome
 
-Download
+Download in respective directories `css` and `fonts`:
 
     https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css
     https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.ttf
