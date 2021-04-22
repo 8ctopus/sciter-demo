@@ -1,12 +1,3 @@
 .hbox {
     vertical-align: middle;
 }
-
-#container {
-    flow: horizontal;
-}
-
-#container > div {
-    width: *;
-    height: 50dip;
-}
