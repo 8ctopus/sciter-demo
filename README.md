@@ -20,6 +20,16 @@ It showcases some of the sciter features I find interesting, namely:
 
 # sciter tips/caveats
 
+## tutorials
+
+    https://sciter.com/tutorials/
+
+## javascript
+
+sciter uses ECMAScript 2015 or ES6.
+
+    https://www.javascripttutorial.net/es6/
+
 ## configure application window
 
 ``` html
@@ -47,12 +57,6 @@ It showcases some of the sciter features I find interesting, namely:
 <body>
 ```
 
-## display flex
-
-Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
-
-    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
-
 ## html ids and classes
 
 Consider this button:
@@ -66,6 +70,18 @@ There's is a shorter notation.
 ``` html
 <button #info .blue>info</button>
 ```
+
+## use dip not pixels
+
+Density-independent Pixels - an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
+
+See https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp
+
+## display flex
+
+Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
+
+    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
 
 ## include html
 
@@ -102,8 +118,11 @@ function log()
 
 ## css constants and variables
 
-Unlike vanilla css, css constants and variables are supported
+Unlike vanilla css, css constants and variables are supported.
 
     https://sciter.com/developers/for-web-programmers/css-constants/
     https://sciter.com/css-variables-support/
 
+## animations
+
+Animations are supported using (Lottie)[https://lottiefiles.com/].
