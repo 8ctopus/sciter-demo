@@ -146,3 +146,33 @@ In `all.css`
 - replace all `:before` by `:::before`
 - remove all `src` from `@font-face` except the ttf ones
 - remove `format("truetype")` from ``@font-face``
+- add to the end of file
+
+```css
+// reset ux-master.css default vertical flow
+button {
+  flow: horizontal;
+}
+
+// reset master-base.css properties on first and last child
+button > :first-child {
+  margin-top: 0;
+}
+
+button > :last-child {
+  margin-bottom: 0;
+}
+
+// fix icons vertical alignment in button
+button > i {
+  vertical-align: middle;
+}
+
+// improve icon position in button
+button > i:first-child {
+  margin-right: 0.5em;
+}
+
+button > i:last-child {
+  margin-left: 0.5em;
+}
