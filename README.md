@@ -30,6 +30,10 @@ sciter uses ECMAScript 2015 or ES6.
 
     https://www.javascripttutorial.net/es6/
 
+## inspect an element in inspector
+
+`CTRL + SHIFT + click` on element to inspect in inspector.
+
 ## configure application window
 
 ``` html
@@ -126,3 +130,19 @@ Unlike vanilla css, css constants and variables are supported.
 ## animations
 
 Animations are supported using (Lottie)[https://lottiefiles.com/].
+
+## add fontawesome
+
+Download
+
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-brands-400.ttf
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-regular-400.ttf
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/webfonts/fa-solid-900.ttf
+
+In `all.css`
+
+- remove unrecognized `@-webkit-keyframes`
+- replace all `:before` by `:::before`
+- remove all `src` from `@font-face` except the ttf ones
+- remove `format("truetype")` from ``@font-face``
