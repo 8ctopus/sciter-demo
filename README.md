@@ -62,7 +62,9 @@ sciter uses ECMAScript 2015 or ES6.
 <body>
 ```
 
-## html ids and classes
+## html
+
+### ids and classes
 
 Consider this button:
 
@@ -76,19 +78,7 @@ There's is a shorter notation.
 <button #info .blue>info</button>
 ```
 
-## use dip not pixels
-
-Density-independent Pixels - an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
-
-See https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp
-
-## display flex
-
-Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
-
-    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
-
-## include html
+### include
 
 Unlike vanila html, it's possible to include html inside another html document:
 
@@ -96,7 +86,7 @@ Unlike vanila html, it's possible to include html inside another html document:
 <include src="window.html" media="sciter" />
 ```
 
-## html events
+## events
 
 This doesn't work.
 
@@ -121,7 +111,22 @@ function log()
 <button #info>info</button>
 ```
 
-## css constants and variables
+
+## css
+
+### use dip not pixels
+
+Density-independent Pixels - an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
+
+See https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp
+
+### display flex
+
+Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
+
+    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
+
+### constants and variables
 
 Unlike vanilla css, css constants and variables are supported.
 
@@ -130,7 +135,7 @@ Unlike vanilla css, css constants and variables are supported.
 
 ## animations
 
-Animations are supported using (Lottie)[https://lottiefiles.com/].
+Animations are supported using [Lottie](https://lottiefiles.com/).
 
 ## fontawesome
 
