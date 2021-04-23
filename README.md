@@ -35,6 +35,11 @@ It showcases some of the sciter features I find interesting, namely:
 
 ## html
 
+sciter supports all standard elements defined in the HTML5 specification with some additions:
+
+    https://sciter.com/developers/for-web-programmers/input-elements-map/
+
+
 ### include
 
 Unlike vanila html, it's possible to include html inside another html document:
@@ -43,7 +48,15 @@ Unlike vanila html, it's possible to include html inside another html document:
 <include src="window.html" media="sciter" />
 ```
 
-### short notation
+or
+
+``` html
+<include src="fragment.htm">
+  fragment.htm is not available!
+</include>
+```
+
+### [short notation](https://sciter.com/sciter-html-parsing-flavour/)
 
 Consider this input:
 
@@ -57,14 +70,47 @@ in sciter there's a shorter notation:
 <input|text(name) #info .blue>info</input>
 ```
 
-### unique elements
+### [unique elements](https://sciter.com/developers/for-web-programmers/input-elements-map/)
 
-- `<popup>` popup element (preferred to be placed in <head>). You can show popup with Element.popupAt.
+#### input
+
+`<input type="currency">`
+`<input type="decimal">`
+`<input type="integer">`
+`<input type="number">`
+`<input type="masked">` masked text input eg: phone, IP address, serial numbers
+`<input type="url">`
+`<input type="slider">` horizontal and vertical slider input
+`<input type="scrollbar">` horizontal and vertical standalone scrollbars
+`<input type="date">` date input
+`<input type="time">` time input
+`<input type="calendar">` month/year/decade/century input
+`<button type="checkbox">...</button>` checkbox combined with its label
+`<button type="radio">...</button>` radio button combined with its label
+`<button type="menu">...<menu></button>` button with popup menu
+`<button type="selector">...</button>` button with popup list of options defined in a separate popup element
+`<button type="menu">...<menu></button>` button with popup menu
+
+#### select
+
+Select elements support `multiple` and `multiple=checkmarks` attributes to allow multi-select list functionality
+
+`<select type="list">` standard select element
+`<select type="dropdown">` standard select element with dropdown list
+`<select type="tree">` select element with `<option>`s organized in hierarchical tree
+
+#### popup menus
+- `<popup>` popup element (preferred to be placed in `<head>`). You can show popup with Element.popupAt.
 - `<menu .context>` context-menu styled element
-- `<plaintext>` Multiline text editor, each line is a <text> element
-- `<htmlarea>` WYSIWYG editor with richtext behavior
+
+#### Text editors
+`<textarea>` standard plain text editor
+`<plaintext>` plain source code editor with line numbers and optional syntax highlighter, each line is a `<text>` element
+`<htmlarea>` ready to use WYSIWYG HTML editor
+
+#### frames
+
 - `<frameset>` child elements to be resizable window blocks
-- `<select|tree>` Tree-list select element, one of behavior select types
 
 ### unique attributes
 
@@ -72,20 +118,31 @@ in sciter there's a shorter notation:
 - `spellcheck` true/false enable or disable spellcheck
 - `novalue` synonym of `placeholder`
 
-## application window attributes
+## [application window](https://sciter.com/html-window/) attributes
+
+- `window-frame` values `default|standard|solid|solid-with-shadow|extended|transparent`
+
+    `none` or attribute omitted as whole – standard OS desktop window frame (with caption and close/maximize) buttons.
+    `solid` – frameless window with non-transparent background, just a rectangular box. Window chrome needs to be defined in markup (see below).
+    `solid-with-shadow` same as above but with shadow if OS supports it.
+    `extended` – window that allows to replace custom elements in window’s caption bar.
+    `transparent` – layered window, it’s shape is determined by background image or border-radius. CSS shall define html { background-color:transparent } for it.
 
 - `window-title` title
-- `window-frame` define window type `default|standard|solid|solid-with-shadow|extended|transparent`
 - `window-resizable`
 - `window-width` initial width of the window
 - `window-height` initial height of the window
-- `window-icon` icon
+- `window-icon`  image for window decoration and in taskbar
 - `lang` define dictionary for spellcheck ISO 639-1
+- `window-blurbehind` create windows with blur-behind effect 
+
+    `auto` – default OS blur-behind effect;
+    `ultra-dark`, `dark`, `light` and `ultra-light`
 
 ``` html
 <html
-    window-title="sciter demo app"
     window-frame="default"
+    window-title="sciter demo app"
     window-resizable="true"
     window-width="750dip"
     window-height="1024dip"
@@ -100,6 +157,11 @@ in sciter there's a shorter notation:
 To create a headless window use `window-frame="extended"`, then define the header components.
 
 - `role="window-caption"` move window by clicking the element
+- `role=window-close` – close button
+- `role=window-icon` – window icon button
+- `role=window-minimize` – minimize button
+- `role=window-maximize` – maximize/restore button
+- `role=window-body` or `<body>` – area (four bands) between `<html>` and that body element is used for window resizing.
 
 ``` html
 <head>
@@ -146,6 +208,23 @@ function log()
 
 ## css
 
+sciter supports CSS level 2.1 in full and has some CSS 3 features.
+
+    https://sciter.com/developers/for-web-programmers/
+
+### unique features
+
+- gradient backgrounds, see `background-color` attribute definition
+- extended image fill, see `background-position` and `background-repeat` attribute definitions
+- flex length units and `flow`
+- foreground images
+- `hit-margin`
+- `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
+
+### all supported properties
+
+    https://sciter.com/docs/content/css/cssmap.html
+
 ### use dip not pixels
 
 Density-independent Pixels - an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
@@ -154,13 +233,13 @@ See https://stackoverflow.com/questions/2025282/what-is-the-difference-between-p
 
 ### display flex
 
-Sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
+sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
 
     https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
 
 ### constants and variables
 
-Unlike vanilla css, css constants and variables are supported.
+Unlike vanilla css, [css constants](https://sciter.com/developers/for-web-programmers/css-constants/) and variables are supported.
 
     https://sciter.com/developers/for-web-programmers/css-constants/
     https://sciter.com/css-variables-support/
