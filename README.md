@@ -29,54 +29,11 @@ It showcases some of the sciter features I find interesting, namely:
 
     https://sciter.com/tutorials/
 
-## javascript
+## sciter docs
 
-sciter uses ECMAScript 2015 or ES6.
-
-    https://www.javascripttutorial.net/es6/
-
-## configure application window
-
-``` html
-<html
-    window-frame="extended"
-    window-resizable="true"
-    window-width="750dip"
-    window-height="1024dip"
-    window-icon="images/seastar.svg"
-    window-blurbehind="light"
-    theme="light">
-<head>
-...
-</head>
-<!-- header before the body tag -->
-<header>
-    <picture src="images/seastar.svg" role="window-icon" />
-    <window-caption role="window-caption">Sciter demo app</window-caption>
-    <window-buttons>
-        <window-button role="window-minimize"></window-button>
-        <window-button role="window-maximize"></window-button>
-        <window-button role="window-close"></window-button>
-    </window-buttons>
-</header>
-<body>
-```
+    https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md
 
 ## html
-
-### ids and classes
-
-Consider this button:
-
-``` html
-<button id="info" class="blue">info</button>
-```
-
-There's is a shorter notation.
-
-``` html
-<button #info .blue>info</button>
-```
 
 ### include
 
@@ -86,7 +43,82 @@ Unlike vanila html, it's possible to include html inside another html document:
 <include src="window.html" media="sciter" />
 ```
 
-## events
+### short notation
+
+Consider this input:
+
+``` html
+<input type="text" name="test" id="info" class="blue">info</input>
+```
+
+in sciter there's a shorter notation:
+
+``` html
+<input|text(name) #info .blue>info</input>
+```
+
+### unique elements
+
+- `<popup>` popup element (preferred to be placed in <head>). You can show popup with Element.popupAt.
+- `<menu .context>` context-menu styled element
+- `<plaintext>` Multiline text editor, each line is a <text> element
+- `<htmlarea>` WYSIWYG editor with richtext behavior
+- `<frameset>` child elements to be resizable window blocks
+- `<select|tree>` Tree-list select element, one of behavior select types
+
+### unique attributes
+
+- `selectable` assign behavior: selectable
+- `spellcheck` true/false enable or disable spellcheck
+- `novalue` synonym of `placeholder`
+
+## application window attributes
+
+- `window-title` title
+- `window-frame` define window type `default|standard|solid|solid-with-shadow|extended|transparent`
+- `window-resizable`
+- `window-width` initial width of the window
+- `window-height` initial height of the window
+- `window-icon` icon
+- `lang` define dictionary for spellcheck ISO 639-1
+
+``` html
+<html
+    window-title="sciter demo app"
+    window-frame="default"
+    window-resizable="true"
+    window-width="750dip"
+    window-height="1024dip"
+    window-icon="images/seastar.svg"
+    window-blurbehind="light"
+    theme="light"
+>
+```
+
+## headless window
+
+To create a headless window use `window-frame="extended"`, then define the header components.
+
+- `role="window-caption"` move window by clicking the element
+
+``` html
+<head>
+...
+</head>
+<!-- header before the body tag -->
+<header>
+    <picture src="images/seastar.svg" role="window-icon" />
+    <window-caption role="window-caption">sciter demo app</window-caption>
+    <window-buttons>
+        <window-button role="window-minimize"></window-button>
+        <window-button role="window-maximize"></window-button>
+        <window-button role="window-close"></window-button>
+    </window-buttons>
+</header>
+<body>
+```
+
+### events
 
 This doesn't work.
 
@@ -132,6 +164,16 @@ Unlike vanilla css, css constants and variables are supported.
 
     https://sciter.com/developers/for-web-programmers/css-constants/
     https://sciter.com/css-variables-support/
+
+## javascript
+
+sciter uses the [QuickJS++](https://github.com/c-smile/quickjspp) javascript engine. 
+
+It adds [JSX](https://facebook.github.io/jsx/), [Mithril](https://mithril.js.org/) and [React](https://reactjs.org/) support:
+
+    https://github.com/c-smile/quickjspp/blob/master/doc/jsx.md
+
+In addition it contains storage in the form of a NoSQL MongoDB.
 
 ## animations
 
@@ -182,3 +224,4 @@ button > i:first-child {
 button > i:last-child {
   margin-left: 0.5em;
 }
+```
