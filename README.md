@@ -103,7 +103,7 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
 - `<popup>` popup element (preferred to be placed in `<head>`). You can show popup with Element.popupAt.
 - `<menu .context>` context-menu styled element
 
-#### Text editors
+#### text editors
 - `<textarea>` standard plain text editor
 - `<plaintext>` plain source code editor with line numbers and optional syntax highlighter, each line is a `<text>` element
 - `<htmlarea>` ready to use WYSIWYG HTML editor
