@@ -74,39 +74,39 @@ in sciter there's a shorter notation:
 
 #### input
 
-`<input type="currency">`
-`<input type="decimal">`
-`<input type="integer">`
-`<input type="number">`
-`<input type="masked">` masked text input eg: phone, IP address, serial numbers
-`<input type="url">`
-`<input type="slider">` horizontal and vertical slider input
-`<input type="scrollbar">` horizontal and vertical standalone scrollbars
-`<input type="date">` date input
-`<input type="time">` time input
-`<input type="calendar">` month/year/decade/century input
-`<button type="checkbox">...</button>` checkbox combined with its label
-`<button type="radio">...</button>` radio button combined with its label
-`<button type="menu">...<menu></button>` button with popup menu
-`<button type="selector">...</button>` button with popup list of options defined in a separate popup element
-`<button type="menu">...<menu></button>` button with popup menu
+- `<input type="currency">`
+- `<input type="decimal">`
+- `<input type="integer">`
+- `<input type="number">`
+- `<input type="masked">` masked text input eg: phone, IP address, serial numbers
+- `<input type="url">`
+- `<input type="slider">` horizontal and vertical slider input
+- `<input type="scrollbar">` horizontal and vertical standalone scrollbars
+- `<input type="date">` date input
+- `<input type="time">` time input
+- `<input type="calendar">` month/year/decade/century input
+- `<button type="checkbox">...</button>` checkbox combined with its label
+- `<button type="radio">...</button>` radio button combined with its label
+- `<button type="menu">...<menu></button>` button with popup menu
+- `<button type="selector">...</button>` button with popup list of options defined in a separate popup element
+- `<button type="menu">...<menu></button>` button with popup menu
 
 #### select
 
 Select elements support `multiple` and `multiple=checkmarks` attributes to allow multi-select list functionality
 
-`<select type="list">` standard select element
-`<select type="dropdown">` standard select element with dropdown list
-`<select type="tree">` select element with `<option>`s organized in hierarchical tree
+- `<select type="list">` standard select element
+- `<select type="dropdown">` standard select element with dropdown list
+- `<select type="tree">` select element with `<option>`s organized in hierarchical tree
 
 #### popup menus
 - `<popup>` popup element (preferred to be placed in `<head>`). You can show popup with Element.popupAt.
 - `<menu .context>` context-menu styled element
 
 #### Text editors
-`<textarea>` standard plain text editor
-`<plaintext>` plain source code editor with line numbers and optional syntax highlighter, each line is a `<text>` element
-`<htmlarea>` ready to use WYSIWYG HTML editor
+- `<textarea>` standard plain text editor
+- `<plaintext>` plain source code editor with line numbers and optional syntax highlighter, each line is a `<text>` element
+- `<htmlarea>` ready to use WYSIWYG HTML editor
 
 #### frames
 
@@ -220,6 +220,7 @@ sciter supports CSS level 2.1 in full and has some CSS 3 features.
 - foreground images
 - `hit-margin`
 - `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
+- `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 
 ### all supported properties
 
