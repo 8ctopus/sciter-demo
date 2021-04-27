@@ -1,7 +1,7 @@
-REM sciter 4.4.7.0
-curl -LO https://github.com/c-smile/sciter-js-sdk/raw/0549c17c3041928daae8e133208a69e5b599a40e/bin/windows/x32/scapp.exe
-curl -LO https://github.com/c-smile/sciter-js-sdk/raw/0549c17c3041928daae8e133208a69e5b599a40e/bin/windows/x32/sciter.dll
-curl -LO https://github.com/c-smile/sciter-js-sdk/raw/0549c17c3041928daae8e133208a69e5b599a40e/bin/windows/x32/inspector.exe
+REM sciter 4.4.7.1
+curl -LO https://github.com/c-smile/sciter-js-sdk/raw/1bc9ff941b9a91e9c56a22bf90400141b7e48c24/bin/windows/x32/scapp.exe
+curl -LO https://github.com/c-smile/sciter-js-sdk/raw/1bc9ff941b9a91e9c56a22bf90400141b7e48c24/bin/windows/x32/sciter.dll
+curl -LO https://github.com/c-smile/sciter-js-sdk/raw/1bc9ff941b9a91e9c56a22bf90400141b7e48c24/bin/windows/x32/inspector.exe
 
 pause
 exit
