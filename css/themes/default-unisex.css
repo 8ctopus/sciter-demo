@@ -1,7 +1,20 @@
+/* edit */
+/* create new ruleset std-edit2 based on std-edit set */
+@set std-edit2 < std-edit {
+    :root {
+        display: block;
+    }
+}
+
+/* create new control editbox that uses std-edit ruleset */
+editbox {
+    style-set: std-edit2;
+}
+
 /* radio button */
 @set std-radio < std-radio {
     :root {
-        display:block;
+        display: block;
     }
 }
 
@@ -9,7 +22,7 @@ radio {
     style-set: std-radio;
 }
 
-/* checkbox button */
+/* checkbox */
 @set std-checkbox < std-checkbox {
     :root {
         display: block;
@@ -20,16 +33,7 @@ checkbox {
     style-set: std-checkbox;
 }
 
-@set std-edit < std-edit {
-    :root {
-        display: block;
-    }
-}
-
-editbox {
-    style-set: std-edit;
-}
-
+/* slider */
 @set std-hslider < std-hslider {
     :root {
         display: block;

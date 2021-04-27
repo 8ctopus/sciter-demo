@@ -126,7 +126,7 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
     `solid` – frameless window with non-transparent background, just a rectangular box. Window chrome needs to be defined in markup (see below).
     `solid-with-shadow` same as above but with shadow if OS supports it.
     `extended` – window that allows to replace custom elements in window’s caption bar.
-    `transparent` – layered window, it’s shape is determined by background image or border-radius. CSS shall define html { background-color:transparent } for it.
+    `transparent` – layered window, it’s shape is determined by background image or border-radius. CSS shall define `html { background-color:transparent }` for it.
 
 - `window-title` title
 - `window-resizable`
@@ -222,6 +222,7 @@ sciter supports CSS level 2.1 in full and has some CSS 3 features.
 - `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 - supports `//` comments
+- [`@set`](https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/)
 
 ### all supported properties
 
