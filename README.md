@@ -221,6 +221,7 @@ sciter supports CSS level 2.1 in full and has some CSS 3 features.
 - `hit-margin`
 - `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
+- supports `//` comments
 
 ### all supported properties
 
@@ -276,7 +277,7 @@ In `all.css`
 - remove `format("truetype")` from ``@font-face``
 - add to the end of file
 
-```css
+``` css
 // reset ux-master.css default vertical flow
 button {
   flow: horizontal;
