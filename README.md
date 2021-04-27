@@ -222,7 +222,7 @@ sciter supports CSS level 2.1 in full and has some CSS 3 features.
 - `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 - supports `//` comments
-- [`@mixin`](https://sciter.com/forums/topic/about-mixins/#post-43092)
+- [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
 - [`@set`](https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/)
 
 ### all supported properties
