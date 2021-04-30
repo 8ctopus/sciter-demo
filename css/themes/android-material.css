@@ -93,6 +93,7 @@ html[ui-size="compact"] {
     color:color(widget-text);
     padding-top:0.5em;
     border-bottom:1dip solid #bbb;
+    min-width: 6em;
     width:*;
     background: url(stock:block) center bottom no-repeat;
     background-size: 0% 2dip;
@@ -105,6 +106,7 @@ html[ui-size="compact"] {
     behavior:edit;
     line-height:1.6em;
   }
+
   :root::marker {
     margin-top:0.5em;
     line-height:1.6em;
@@ -116,13 +118,11 @@ html[ui-size="compact"] {
   }
 
   :root:owns-focus::marker,
-  :root:not(:empty)::marker
-  {
+  :root:not(:empty)::marker {
     transform: translate(0,-80%) scale(0.7);
   }
 
-  :root:owns-focus
-  {
+  :root:owns-focus {
     background-size: 100% 2dip;
   }
 
@@ -136,11 +136,11 @@ html[ui-size="compact"] {
     stroke:none;
     box-sizing: content-box;
   }
+
   :root[nullable]:not(:empty) {
     //fill:transparent;
     foreground-image: url(stock:cross-x);
   }
-
 }
 
 
