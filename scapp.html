@@ -12,6 +12,17 @@
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 <script>
 
+document.ready = function () {
+    // get current window
+    const window = Window.this;
+
+    // maximize window
+    window.state = Window.WINDOW_MAXIMIZED;
+
+    // move window
+    //window.move(0, 0);
+}
+
 document.on("input", "form#config", function(evt, form) {
     // set document light/dark mode
     document.attributes["theme"] = form.value.mode;
