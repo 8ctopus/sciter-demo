@@ -6,7 +6,6 @@
 */
 
 html:theme(dark) {
-
   var(accent): morph(window-accent-color,lightness:40%);
   var(accent-text): highlighttext;
 
@@ -25,8 +24,7 @@ html:theme(dark) {
 }
 
 //html:theme(light)
-html:not(:theme(dark))
-{
+html:not(:theme(dark)) {
   var(accent): window-accent-color;
   var(accent-text): highlighttext;
 
@@ -45,7 +43,6 @@ html:not(:theme(dark))
 }
 
 html {
-
   font-family: "Segoe UI", Helvetica, sans-serif;
   font-size: 11pt;
 
@@ -60,16 +57,6 @@ html {
 
 html[ui-size="compact"] {
   font-size: 9pt;
-}
-
-.hbox {
-  flow: horizontal-wrap;
-  border-spacing: 0.5em;
-}
-
-.vbox {
-  flow: vertical;
-  border-spacing: 0.5em;
 }
 
 @set std-toggle {
