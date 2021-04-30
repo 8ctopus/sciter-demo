@@ -36,10 +36,6 @@ p {
     text-align: center;
 }
 
-.toggles {
-    flow: row(label,toggle);
-}
-
 plaintext {
     width: *;
     height: 100dip;
@@ -143,14 +139,12 @@ async function loadcss() {
 
     <div .hbox>
         <p>toggle</p>
-        <div .toggles>
-            <toggle (foo) checked>
-                <option>No</option>
-                <option>Yes</option>
-            </toggle>
+        <toggle (foo) checked>
+            <option>No</option>
+            <option>Yes</option>
+        </toggle>
 
-            <toggle (bar) />
-        </div>
+        <toggle (bar) />
     </div>
 
     <div .hbox>
