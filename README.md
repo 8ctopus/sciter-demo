@@ -208,9 +208,9 @@ function log()
 
 ## css
 
-sciter supports css level 2.1 in full and has some css 3 features.
+sciter supports css level 2.1 in full and has some css 3 features
 
-    https://sciter.com/developers/for-web-programmers/
+[https://sciter.com/developers/for-web-programmers/](https://sciter.com/developers/for-web-programmers/)
 
 ### unique features
 
@@ -227,26 +227,26 @@ sciter supports css level 2.1 in full and has some css 3 features.
 
 ### all supported properties
 
-[https://sciter.com/docs/content/css/cssmap.html]()
-
-### use dip not pixels
-
-Density-independent Pixels - an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
-
-See https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp
+[https://sciter.com/docs/content/css/cssmap.html](https://sciter.com/docs/content/css/cssmap.html)
 
 ### display flex
 
 sciter does not support `display: flex`, you need to use the custom css property `flow` instead.
 
-    https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm
+[https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm](https://terrainformatica.com/w3/flex-layout/flex-vs-flexbox.htm)
+
+### use `dip` not pixels
+
+Density independent pixels is an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
+
+See [https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp](https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp)
 
 ### constants and variables
 
-Unlike vanilla css, [css constants](https://sciter.com/developers/for-web-programmers/css-constants/) and variables are supported.
+Unlike vanilla css, css constants and variables are supported.
 
-    https://sciter.com/developers/for-web-programmers/css-constants/
-    https://sciter.com/css-variables-support/
+[https://sciter.com/developers/for-web-programmers/css-constants/](https://sciter.com/developers/for-web-programmers/css-constants/)
+[https://sciter.com/css-variables-support/](https://sciter.com/css-variables-support/)
 
 ## javascript
 
@@ -273,10 +273,10 @@ Download in respective directories `css` and `fonts`:
 
 In `all.css`
 
-- remove unrecognized `@-webkit-keyframes`
-- replace all `:before` by `:::before`
+- remove unrecognized `@-webkit-keyframes` properties
+- replace all `:before` by `::before`
 - remove all `src` from `@font-face` except the ttf ones
-- remove `format("truetype")` from ``@font-face``
+- remove `format("truetype")` from `@font-face`
 - add to the end of file
 
 ```css
