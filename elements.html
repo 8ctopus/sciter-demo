@@ -28,47 +28,31 @@ plaintext {
 }
 
 </style>
+<script src="js/dialogs.js" />
 <script>
 
-document.$("#info").onclick = function () {
-    Window.this.modal(
-        <info>Hello world!</info>
-    );
+// set dialog buttons on click event
+document.$("button#info").onclick = function () {
+    Window.this.modal(dialogInfo);
 };
 
-document.$("#alert").onclick = function () {
-    Window.this.modal(
-        <alert caption="Alert">
-            <p>Don't worry!</p>
-            <p>It is just a demo</p>
-        </alert>
-    );
+document.$("button#alert").onclick = function () {
+    Window.this.modal(dialogAlert);
 };
 
-document.$("#error").onclick = function () {
-    Window.this.modal(
-        <error>
-            <p>Don't worry!</p>
-            <p>It is just a demo</p>
-        </error>
-    );
+document.$("button#error").onclick = function () {
+    Window.this.modal(dialogError);
 };
 
-document.$("#custom").onclick = function () {
-    Window.this.modal(
-        <question>
-            <content>Be or not to be?</content>
-            <buttons>
-                <button id="yes" role="default-button">Yes</button>
-                <button id="no" role="cancel-button">No</button>
-            </buttons>
-        </question>
-    );
+document.$("button#custom").onclick = function () {
+    Window.this.modal(dialogQuestion);
 };
 
+// set load css
 document.on("click", "button#plaintext", loadcss);
 
 document.ready = loadcss;
+
 
 /**
  * Load file into plaintext
