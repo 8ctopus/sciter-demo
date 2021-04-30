@@ -13,18 +13,40 @@ html[ui-size=compact] {
     font-size: 9pt;
 }
 
-.hbox {
-    size: max-content;
+body {
+    flow: horizontal-flow;
+}
 
-    flow: horizontal;
+.hbox {
+    width: max-content;
+    height: 260dip;
+
+    flow: vertical;
 
     // spacing of elements in flow
     border-spacing: 1.0em;
 
-//    border: 1dip solid gray;
+    border: 1dip solid gray;
 
     padding: 1em;
 }
+
+p {
+    margin: 0;
+    text-align: center;
+}
+
+/*
+button {
+    min-width: 4em;
+    max-width: 4em;
+}
+
+editbox {
+    min-width: 6em;
+    max-width: 6em;
+}
+*/
 
 .toggles {
     flow: row(label,toggle);
@@ -87,8 +109,8 @@ async function loadcss() {
 </head>
 <body>
     <div .hbox>
-        <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
-        <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
+        <p>buttons</p>
+        <button>Do it!</button>
         <button role="default-button">Default</button>
         <button disabled>Disabled</button>
         <button .success>Success</button>
@@ -97,6 +119,7 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>editbox</p>
         <editbox value="foo" placeholder="input with content" />
         <editbox placeholder="input text here" />
         <editbox nullable placeholder="nullable" />
@@ -104,12 +127,14 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>input|number</p>
         <input|number value="42" step="1" min="0" max="999" placeholder="number1" />
         <input|number placeholder="number2" step="1" min="0" max="999" />
         <input|number disabled  step="1" min="0" max="999" />
     </div>
 
     <div .hbox>
+        <p>radio</p>
         <radio (rgroup) checked value="true">Yes</radio>
         <radio (rgroup) value="false">No</radio>
         <radio (rgroup) value="null">Undefined</radio>
@@ -119,6 +144,7 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>checkbox</p>
         <checkbox checked>Checked</checkbox>
         <checkbox>Unchecked</checkbox>
         <checkbox mixed>Mixed</checkbox>
@@ -128,19 +154,19 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>toggle</p>
         <div .toggles>
-            <label>With options:</label>
             <toggle (foo) checked>
                 <option>No</option>
                 <option>Yes</option>
             </toggle>
 
-            <label>No options:</label>
             <toggle (bar) />
         </div>
     </div>
 
     <div .hbox>
+        <p>select|dropdown</p>
         <select|dropdown novalue="dropdown">
             <option>Apple</option>
             <option>Apricot</option>
@@ -173,6 +199,7 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>progress</p>
         0: <progress value=0 max=100 />
         50: <progress value=50 max=100 />
         100: <progress value=100 max=100 />
@@ -180,11 +207,13 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>slider</p>
         <slider min=0 max=100 value=50 />
         <slider disabled min=0 max=100 value=50 />
     </div>
 
     <div .hbox>
+        <p>dialogs</p>
         <button #info>info</button>
         <button #alert>alert</button>
         <button #error>error</button>
@@ -192,8 +221,15 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>plaintext</p>
         <plaintext type="text/css" />
         <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+    </div>
+
+    <div .hbox>
+        <p>fontawesome</p>
+        <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
+        <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
     </div>
 
 </body>
