@@ -1,10 +1,10 @@
 # sciter demo
 
-This is a [sciter](https://sciter.com/) js demo app built from multiple sciter samples.
+This is a [sciter.js](https://sciter.com/) demo app built from multiple sciter samples.
 
 It showcases some of the sciter features I find interesting, namely:
 - components: buttons, checkboxes, ...
-- javacript
+- javascript
 - themes
 
 ## sciter examples used:
@@ -42,15 +42,15 @@ sciter supports all standard elements defined in the HTML5 specification with so
 
 ### include
 
-Unlike vanila html, it's possible to include html inside another html document:
+Unlike vanilla html, it's possible to include html inside another html document:
 
-``` html
+```html
 <include src="window.html" media="sciter" />
 ```
 
 or
 
-``` html
+```html
 <include src="fragment.htm">
   fragment.htm is not available!
 </include>
@@ -60,13 +60,13 @@ or
 
 Consider this input:
 
-``` html
+```html
 <input type="text" name="test" id="info" class="blue">info</input>
 ```
 
 in sciter there's a shorter notation:
 
-``` html
+```html
 <input|text(name) #info .blue>info</input>
 ```
 
@@ -208,7 +208,7 @@ function log()
 
 ## css
 
-sciter supports CSS level 2.1 in full and has some CSS 3 features.
+sciter supports css level 2.1 in full and has some css 3 features.
 
     https://sciter.com/developers/for-web-programmers/
 
@@ -227,7 +227,7 @@ sciter supports CSS level 2.1 in full and has some CSS 3 features.
 
 ### all supported properties
 
-    https://sciter.com/docs/content/css/cssmap.html
+[https://sciter.com/docs/content/css/cssmap.html]()
 
 ### use dip not pixels
 
@@ -279,7 +279,7 @@ In `all.css`
 - remove `format("truetype")` from ``@font-face``
 - add to the end of file
 
-``` css
+```css
 // reset ux-master.css default vertical flow
 button {
   flow: horizontal;

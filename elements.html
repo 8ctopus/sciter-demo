@@ -122,12 +122,12 @@ async function loadcss() {
 
     <h2>radio element</h2>
     <div .hbox>
-        <radio(rgroup) checked value="true">Yes</radio>
-        <radio(rgroup) value="false">No</radio>
-        <radio(rgroup) value="null">Undefined</radio>
+        <radio (rgroup) checked value="true">Yes</radio>
+        <radio (rgroup) value="false">No</radio>
+        <radio (rgroup) value="null">Undefined</radio>
 
-        <radio(rgroupd) disabled checked value="a">Disabled (Checked)</radio>
-        <radio(rgroupd) disabled value="b">Disabled</radio>
+        <radio (rgroupd) disabled checked value="a">Disabled (Checked)</radio>
+        <radio (rgroupd) disabled value="b">Disabled</radio>
     </div>
 
     <h2>checkbox element</h2>
@@ -143,13 +143,13 @@ async function loadcss() {
     <h2>toggle element</h2>
     <div .toggles>
         <label>With options:</label>
-        <toggle(foo) checked>
+        <toggle (foo) checked>
             <option>No</option>
             <option>Yes</option>
         </toggle>
 
         <label>No options:</label>
-        <toggle(bar) />
+        <toggle (bar) />
     </div>
 
     <h2>select|dropdown element</h2>
