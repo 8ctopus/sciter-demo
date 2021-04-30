@@ -13,9 +13,25 @@ html[ui-size=compact] {
     font-size: 9pt;
 }
 
+body {
+    flow: row(div,div);
+}
+
+.vbox {
+    width: *;
+    height: max-content;
+
+//    border: 1dip solid green;
+
+    padding-bottom: 2em;
+}
+
 .hbox {
     flow: horizontal;
+    size: max-content;
+
     border-spacing: 0.5em;
+//    border: 1dip solid red;
 }
 
 .toggles {
@@ -78,123 +94,145 @@ async function loadcss() {
 </script>
 </head>
 <body>
-    <h2><i class="fas fa-star"></i>button element</h2>
-    <div .hbox>
-        <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
-        <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
-        <button role="default-button">Default</button>
-        <button disabled>Disabled</button>
-        <button .success>Success</button>
-        <button .warning>Warning</button>
-        <button .danger>Danger</button>
+    <div .vbox>
+        <h2><i class="fas fa-star"></i>button element</h2>
+        <div .hbox>
+            <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
+            <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
+            <button role="default-button">Default</button>
+            <button disabled>Disabled</button>
+            <button .success>Success</button>
+            <button .warning>Warning</button>
+            <button .danger>Danger</button>
+        </div>
     </div>
 
-    <h2>editbox element</h2>
-    <div .hbox>
-        <editbox value="foo" placeholder="input with content" />
-        <editbox placeholder="input text here" />
-        <editbox nullable placeholder="nullable" />
-        <editbox disabled value="disabled" />
+    <div .vbox>
+        <h2>editbox element</h2>
+        <div .hbox>
+            <editbox value="foo" placeholder="input with content" />
+            <editbox placeholder="input text here" />
+            <editbox nullable placeholder="nullable" />
+            <editbox disabled value="disabled" />
+        </div>
     </div>
 
-    <h2>input|number element</h2>
-    <div .hbox>
-        <input|number value="42" step="1" min="0" max="999" placeholder="number1" />
-        <input|number placeholder="number2" step="1" min="0" max="999" />
-        <input|number disabled  step="1" min="0" max="999" />
+    <div .vbox>
+        <h2>input|number element</h2>
+        <div .hbox>
+            <input|number value="42" step="1" min="0" max="999" placeholder="number1" />
+            <input|number placeholder="number2" step="1" min="0" max="999" />
+            <input|number disabled  step="1" min="0" max="999" />
+        </div>
     </div>
 
-    <h2>radio element</h2>
-    <div .hbox>
-        <radio (rgroup) checked value="true">Yes</radio>
-        <radio (rgroup) value="false">No</radio>
-        <radio (rgroup) value="null">Undefined</radio>
+    <div .vbox>
+        <h2>radio element</h2>
+        <div .hbox>
+            <radio (rgroup) checked value="true">Yes</radio>
+            <radio (rgroup) value="false">No</radio>
+            <radio (rgroup) value="null">Undefined</radio>
 
-        <radio (rgroupd) disabled checked value="a">Disabled (Checked)</radio>
-        <radio (rgroupd) disabled value="b">Disabled</radio>
+            <radio (rgroupd) disabled checked value="a">Disabled (Checked)</radio>
+            <radio (rgroupd) disabled value="b">Disabled</radio>
+        </div>
     </div>
 
-    <h2>checkbox element</h2>
-    <div .hbox>
-        <checkbox checked>Checked</checkbox>
-        <checkbox>Unchecked</checkbox>
-        <checkbox mixed>Mixed</checkbox>
+    <div .vbox>
+        <h2>checkbox element</h2>
+        <div .hbox>
+            <checkbox checked>Checked</checkbox>
+            <checkbox>Unchecked</checkbox>
+            <checkbox mixed>Mixed</checkbox>
 
-        <checkbox disabled checked value="a">Disabled (Checked)</checkbox>
-        <checkbox disabled value="b">Disabled</checkbox>
+            <checkbox disabled checked value="a">Disabled (Checked)</checkbox>
+            <checkbox disabled value="b">Disabled</checkbox>
+        </div>
     </div>
 
-    <h2>toggle element</h2>
-    <div .toggles>
-        <label>With options:</label>
-        <toggle (foo) checked>
-            <option>No</option>
-            <option>Yes</option>
-        </toggle>
+    <div .vbox>
+        <h2>toggle element</h2>
+        <div .toggles>
+            <label>With options:</label>
+            <toggle (foo) checked>
+                <option>No</option>
+                <option>Yes</option>
+            </toggle>
 
-        <label>No options:</label>
-        <toggle (bar) />
+            <label>No options:</label>
+            <toggle (bar) />
+        </div>
     </div>
 
-    <h2>select|dropdown element</h2>
-    <div .hbox>
-        <select|dropdown novalue="dropdown">
-            <option>Apple</option>
-            <option>Apricot</option>
-            <option>Currant</option>
-            <option>Grapefruit</option>
-            <option>Peach</option>
-            <option>Pomegranate</option>
-            <option>Tamarind</option>
-        </select>
+    <div .vbox>
+        <h2>select|dropdown element</h2>
+        <div .hbox>
+            <select|dropdown novalue="dropdown">
+                <option>Apple</option>
+                <option>Apricot</option>
+                <option>Currant</option>
+                <option>Grapefruit</option>
+                <option>Peach</option>
+                <option>Pomegranate</option>
+                <option>Tamarind</option>
+            </select>
 
-        <select|dropdown editable>
-            <option>Apple</option>
-            <option>Apricot</option>
-            <option>Currant</option>
-            <option>Grapefruit</option>
-            <option>Peach</option>
-            <option>Pomegranate</option>
-            <option>Tamarind</option>
-        </select>
+            <select|dropdown editable>
+                <option>Apple</option>
+                <option>Apricot</option>
+                <option>Currant</option>
+                <option>Grapefruit</option>
+                <option>Peach</option>
+                <option>Pomegranate</option>
+                <option>Tamarind</option>
+            </select>
 
-        <select|dropdown novalue="disabled" disabled>
-            <option>Apple</option>
-            <option>Apricot</option>
-            <option>Currant</option>
-            <option>Grapefruit</option>
-            <option>Peach</option>
-            <option>Pomegranate</option>
-            <option>Tamarind</option>
-        </select>
+            <select|dropdown novalue="disabled" disabled>
+                <option>Apple</option>
+                <option>Apricot</option>
+                <option>Currant</option>
+                <option>Grapefruit</option>
+                <option>Peach</option>
+                <option>Pomegranate</option>
+                <option>Tamarind</option>
+            </select>
+        </div>
     </div>
 
-    <h2>progress</h2>
-    <div .hbox>
-        0: <progress value=0 max=100 />
-        50: <progress value=50 max=100 />
-        100: <progress value=100 max=100 />
-        undetermined: <progress />
+    <div .vbox>
+        <h2>progress</h2>
+        <div .hbox>
+            0: <progress value=0 max=100 />
+            50: <progress value=50 max=100 />
+            100: <progress value=100 max=100 />
+            undetermined: <progress />
+        </div>
     </div>
 
-    <h2>slider</h2>
-    <div .hbox>
-        <slider min=0 max=100 value=50 />
-        <slider disabled min=0 max=100 value=50 />
+    <div .vbox>
+        <h2>slider</h2>
+        <div .hbox>
+            <slider min=0 max=100 value=50 />
+            <slider disabled min=0 max=100 value=50 />
+        </div>
     </div>
 
-    <h2>message box</h2>
-    <div .hbox>
-        <button #info>info</button>
-        <button #alert>alert</button>
-        <button #error>error</button>
-        <button #custom>custom</button>
+    <div .vbox>
+        <h2>message box</h2>
+        <div .hbox>
+            <button #info>info</button>
+            <button #alert>alert</button>
+            <button #error>error</button>
+            <button #custom>custom</button>
+        </div>
     </div>
 
-    <h2>plaintext</h2>
-    <div .hbox>
-        <plaintext type="text/css" />
-        <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+    <div .vbox>
+        <h2>plaintext</h2>
+        <div .hbox>
+            <plaintext type="text/css" />
+            <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+        </div>
     </div>
 </body>
 </html>
