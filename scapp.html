@@ -16,8 +16,9 @@ document.ready = function () {
     // get current window
     const window = Window.this;
 
-    // maximize window
-    window.state = Window.WINDOW_MAXIMIZED;
+    if (window.state != Window.WINDOW_MAXIMIZED)
+        // maximize window
+        window.state = Window.WINDOW_MAXIMIZED;
 
     // move window
     //window.move(0, 0);
