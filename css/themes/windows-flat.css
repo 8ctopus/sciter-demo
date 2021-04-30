@@ -55,10 +55,6 @@ html {
   color: color(panel-text);
 }
 
-html[ui-size="compact"] {
-  font-size: 9pt;
-}
-
 @set std-toggle {
   :root {
     display: inline-block;

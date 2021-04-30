@@ -2,6 +2,7 @@
 html {
   font:system;
   font-size:11pt;
+
   var(accent)      : window-accent-color;
   var(accent-text) : #fff;
   var(lighten5) : morph(window-accent-color, lighten:60%);
@@ -32,10 +33,6 @@ html {
   var(widget-text): #000;
 
   var(disabled-text): #999;
-}
-
-html[ui-size="compact"] {
-  font-size:9pt;
 }
 
 @set std-button < std-button-base {
