@@ -91,8 +91,7 @@ html {
 
 @set std-button < std-button-base
 {
-  :root
-  {
+  :root {
     //font:system;
     flow: vertical;
     padding: 1px 1em;
@@ -117,8 +116,7 @@ html {
 }
 
 /* radio button */
-@set std-radio < std-radio-base
-{
+@set std-radio < std-radio-base {
     input:root {
       padding: 0px;
       size: 1.12em;
@@ -141,8 +139,13 @@ html {
       border-radius: 50%;
     }
 
-    :root:not(input)::marker { margin: * * * 0.21em; }
-    :root:not(input)::marker:rtl { margin: * 0.21em * *; }
+    :root:not(input)::marker {
+      margin: * * * 0.21em;
+    }
+
+    :root:not(input)::marker:rtl {
+      margin: * 0.21em * *;
+    }
 
     //:root:active::marker { background-color: @HIGHLIGHT-HOVER; }
 
@@ -152,7 +155,9 @@ html {
       fill: color(panel-text);
     }
 
-    :root:hover::marker { fill: color(text); }
+    :root:hover::marker {
+      fill: color(text);
+    }
 
     :root:disabled {
       color: color(disabled-text);
