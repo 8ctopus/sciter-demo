@@ -113,13 +113,20 @@ async function loadcss() {
         <editbox placeholder="input text here" />
         <editbox nullable placeholder="nullable" />
         <editbox disabled value="disabled" />
+        <input type="password" placeholder="password" />
+        <!-- not working
+        <input type="currency" placeholder="currency" />
+        <input type="url" placeholder="url" />
+        -->
     </div>
 
     <div .hbox>
         <p>input|number</p>
         <input|number value="42" step="1" min="0" max="999" placeholder="number1" />
-        <input|number placeholder="number2" step="1" min="0" max="999" />
-        <input|number disabled  step="1" min="0" max="999" />
+        <input|number step="1" min="0" max="999" placeholder="number2" />
+        <input|number disabled step="1" min="0" max="999" />
+        <input|decimal value="42.13" />
+        <input|integer value="42" />
     </div>
 
     <div .hbox>
@@ -219,5 +226,7 @@ async function loadcss() {
         <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
     </div>
 
+    <div .hbox>
+    </div>
 </body>
 </html>
