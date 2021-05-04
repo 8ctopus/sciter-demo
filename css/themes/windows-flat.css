@@ -55,67 +55,6 @@ html {
   color: color(panel-text);
 }
 
-@set std-toggle {
-  :root {
-    display: inline-block;
-    behavior: check;
-    flow: stack;
-    border: none;
-    background: none;
-    width: max-content;
-    height: 1.4em;
-    padding: 0 0 0 42dip;
-    border-radius: 0.7em;
-    cursor: pointer;
-  }
-
-  :root[type="radio"] {
-    behavior: radio;
-  }
-
-  :root::marker {
-    width: 2.24em;
-    height: 1.05em;
-    background: var(back,threedlight);
-    border: length(border-width) solid color(border);
-    border-radius: 0.7em;
-    margin: * * * 0.21em;
-    foreground-image: url(stock:disk);
-    foreground-repeat: no-repeat;
-    foreground-position: 0.35em 50%;
-    foreground-size: 0.7em;
-    fill: color(text);
-    stroke: none;
-    transition: foreground-position sine-in 120ms, background-color linear 120ms, fill linear 120ms, border linear 120ms;
-  }
-
-  :root:checked::marker {
-    foreground-position: 1.52em 50%;
-    background: color(accent);
-    border: color(accent);
-    fill: color(accent-text);
-  }
-
-  :root > option:first-child { visibility: visible; }
-  :root > option:last-child { visibility: hidden; }
-  :root:checked > option:first-child { visibility: hidden; }
-  :root:checked > option:last-child { visibility: visible; }
-
-  :root:tab-focus {
-    outline: 0.14em solid color(accent) 0.14em;
-  }
-
-  :root:disabled {
-    background: color(accent);
-    border: color(accent);
-    fill: color(accent-text);
-  }
-}
-
-toggle {
-  style-set: std-toggle;
-}
-
 @mixin STD-BUTTON-NORMAL {
   color: color(text);
   background: color(button-back);
@@ -309,6 +248,67 @@ radio {
 checkbox {
   display: inline-block;
   style-set: std-checkbox;
+}
+
+@set std-toggle {
+  :root {
+    display: inline-block;
+    behavior: check;
+    flow: stack;
+    border: none;
+    background: none;
+    width: max-content;
+    height: 1.4em;
+    padding: 0 0 0 42dip;
+    border-radius: 0.7em;
+    cursor: pointer;
+  }
+
+  :root[type="radio"] {
+    behavior: radio;
+  }
+
+  :root::marker {
+    width: 2.24em;
+    height: 1.05em;
+    background: var(back,threedlight);
+    border: length(border-width) solid color(border);
+    border-radius: 0.7em;
+    margin: * * * 0.21em;
+    foreground-image: url(stock:disk);
+    foreground-repeat: no-repeat;
+    foreground-position: 0.35em 50%;
+    foreground-size: 0.7em;
+    fill: color(text);
+    stroke: none;
+    transition: foreground-position sine-in 120ms, background-color linear 120ms, fill linear 120ms, border linear 120ms;
+  }
+
+  :root:checked::marker {
+    foreground-position: 1.52em 50%;
+    background: color(accent);
+    border: color(accent);
+    fill: color(accent-text);
+  }
+
+  :root > option:first-child { visibility: visible; }
+  :root > option:last-child { visibility: hidden; }
+  :root:checked > option:first-child { visibility: hidden; }
+  :root:checked > option:last-child { visibility: visible; }
+
+  :root:tab-focus {
+    outline: 0.14em solid color(accent) 0.14em;
+  }
+
+  :root:disabled {
+    background: color(accent);
+    border: color(accent);
+    fill: color(accent-text);
+  }
+}
+
+toggle {
+  style-set: std-toggle;
 }
 
 @mixin STD-BOX-NORMAL {
