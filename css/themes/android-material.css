@@ -43,9 +43,13 @@ html {
     cursor:pointer;
     padding:0.5em 1em;
   }
+
   //:root:hover { background: color(lighten3); }
   //:root:active { background: color(lighten5); }
-  :root:tab-focus { outline:1dip dashed color(accent) -4dip; }
+
+  :root:tab-focus {
+    outline: 1dip dashed color(accent) -4dip;
+  }
 
   :root:not(:disabled).primary,
   :root:not(:disabled)[role="default-button"] {
@@ -81,8 +85,7 @@ html {
   }
 }
 
-@set std-edit
-{
+@set std-edit {
   :root {
     display:block;
     background:transparent;
@@ -140,8 +143,7 @@ html {
 }
 
 
-@set std-number-edit < std-number-edit-base
-{
+@set std-number-edit < std-number-edit-base {
   :root {
     display:block;
     background:transparent;
@@ -157,6 +159,7 @@ html {
     flow:horizontal; border-spacing:1dip;
     line-height:1.6em;
   }
+
   :root::marker {
     margin-top:0.5em;
     line-height:1.6em;
@@ -170,13 +173,11 @@ html {
   }
 
   :root:owns-focus::marker,
-  :root:not(:empty)::marker
-  {
+  :root:not(:empty)::marker {
     transform: translate(0,-80%) scale(0.7);
   }
 
-  :root:owns-focus
-  {
+  :root:owns-focus {
     background-size: 100% 2dip;
   }
 
@@ -185,8 +186,7 @@ html {
   //:root:disabled         { background:color(widget-disabled); color:color(widget-disabled-text); }
   //:root:tab-focus        { outline:@STD-OUTLINE-FOCUS; }
 
-  :root > caption
-  {
+  :root > caption {
     width:*;
     line-height:1.6em;
     height:1.6em;
@@ -196,8 +196,7 @@ html {
   //:root:disabled > caption { color:color(widget-disabled-text); }
   //:root:not([step]) > caption { border-radius: length(border-radius); }
 
-  :root > button
-  {
+  :root > button {
     height:*;
     min-height:5dip;
     width:1.6em;
@@ -224,26 +223,25 @@ html {
     fill: color(widget-disabled-text);
   }*/
 
-  :root > button.minus
-  {
+  :root > button.minus {
     padding:0;
     foreground-image: url(stock:chevron-down);
   }
 
-  :root > button.plus
-  {
+  :root > button.plus {
     padding:0;
     foreground-image: url(stock:chevron-up);
   }
-
 }
 
-
-
-editbox { style-set:std-edit; }
+editbox {
+  style-set: std-edit;
+}
 
 /* radio button */
-radio { style-set: std-radio; }
+radio {
+  style-set: std-radio;
+}
 
 @set std-radio {
   :root {
@@ -271,14 +269,16 @@ radio { style-set: std-radio; }
     border-color:color(accent);
   }
 
-  :root:tab-focus { outline:1dip dashed color(normal) 2dip; }
-
+  :root:tab-focus {
+    outline:1dip dashed color(normal) 2dip;
+  }
 }
 
 
-
 /* checkbox button */
-checkbox { style-set: std-checkbox; }
+checkbox {
+  style-set: std-checkbox;
+}
 
 @set std-checkbox {
   :root {
@@ -309,13 +309,15 @@ checkbox { style-set: std-checkbox; }
     border-color:color(accent);
   }
 
-:root[mixed]:empty::marker {
+  :root[mixed]:empty::marker {
     background-image: url(path:M1664 416v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z);
     background-size: 0.5em;
     fill:color(widget-text);
   }
 
-  :root:tab-focus { outline:1dip dashed color(accent) 2dip; }
+  :root:tab-focus {
+    outline:1dip dashed color(accent) 2dip;
+  }
 }
 
 @set std-toggle {
@@ -332,14 +334,15 @@ checkbox { style-set: std-checkbox; }
     transition: background-color linear 160ms;
   }
 
-  :root > option { visibility:none; }
+  :root > option {
+    visibility:none;
+  }
 
   :root:checked {
     background-color:color(lighten4);
   }
 
-  :root::marker // the knob
-  {
+  :root::marker { // the knob
     display:block;
     background-color:#bbb;
     size:1.4em;
@@ -355,12 +358,17 @@ checkbox { style-set: std-checkbox; }
     background-color:var(accent,#000);
   }
 
-  :root:tab-focus { outline:1dip dashed color(normal) 2dip; }
+  :root:tab-focus {
+    outline: 1dip dashed color(normal) 2dip;
+  }
 }
 
-slider { display:inline-block; style-set:std-hslider; }
+slider {
+  display: inline-block;
+  style-set: std-hslider;
+}
 
-@set std-hslider < std-hslider-base{
+@set std-hslider < std-hslider-base {
   :root {
     display:block;
     background:#ddd;
@@ -374,6 +382,7 @@ slider { display:inline-block; style-set:std-hslider; }
     height:2dip;
     background-size: var(slider-position,0px) 2dip; // "value" part
   }
+
   :root > knob {
     size:16dip;
     box-shadow: #aaa 1dip 1dip 1dip;
@@ -403,11 +412,12 @@ slider { display:inline-block; style-set:std-hslider; }
   :root:hover > knob::marker {
     transform: translate(-8dip, -100%) scale(1);
   }
-
 }
 
-input { display:block; width:8em; }
-
+input {
+  display: block;
+  width:8em;
+}
 
 @set std-select-dropdown < std-select-dropdown-base {
   :root {
@@ -418,9 +428,13 @@ input { display:block; width:8em; }
     cursor:pointer;
     padding:0.5em 1em;
   }
+
   //:root:hover { background: color(lighten3); }
   //:root:active { background: color(lighten5); }
-  :root:tab-focus { outline:1dip dashed color(accent) -4dip; }
+
+  :root:tab-focus {
+    outline: 1dip dashed color(accent) -4dip;
+  }
 
   :root:disabled {
     background:color(button-face-disabled);
@@ -437,10 +451,8 @@ input { display:block; width:8em; }
 }
 
 
-@set std-progress < std-progress-base
-{
-  :root
-  {
+@set std-progress < std-progress-base {
+  :root {
     display:block;
     width:8em;
     height:0.28em;
@@ -458,8 +470,7 @@ input { display:block; width:8em; }
     stroke-width:0;
   }
 
-  :root:busy::marker
-  {
+  :root:busy::marker {
     width:*;
     height:*;
     background-repeat: no-repeat;
