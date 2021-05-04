@@ -93,7 +93,7 @@ html {
 {
   :root {
     //font:system;
-    flow: vertical;
+    flow: horizontal;
     padding: 1px 1em;
     height: 2em;
     line-height: height(100%);

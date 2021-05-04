@@ -36,6 +36,7 @@ html {
 
 @set std-button < std-button-base {
   :root {
+    flow: horizontal;
     aspect: Ripple url(theme.js);
     color: color(button-text);
     background: color(button-face);
@@ -156,7 +157,8 @@ html {
     background-clip: border-box;
     fill: color(accent);
     transition: background-size quad-out 160ms;
-    flow:horizontal; border-spacing:1dip;
+    flow:horizontal;
+    border-spacing:1dip;
     line-height:1.6em;
   }
 
