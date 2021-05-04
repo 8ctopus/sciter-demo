@@ -117,61 +117,61 @@ html {
 
 /* radio button */
 @set std-radio < std-radio-base {
-    input:root {
-      padding: 0px;
-      size: 1.12em;
-      vertical-align: middle;
-    }
+  input:root {
+    padding: 0px;
+    size: 1.12em;
+    vertical-align: middle;
+  }
 
-    :root:not(input) {
-      white-space: nowrap;
-      line-height: 1.4em;
-      height: 1.4em;
-      padding: 0.25em 0.25em 0.25em 1.82em;
-      width: max-content;
-    }
+  :root:not(input) {
+    white-space: nowrap;
+    line-height: 1.4em;
+    height: 1.4em;
+    padding: 0.25em 0.25em 0.25em 1.82em;
+    width: max-content;
+  }
 
-    :root::marker {
-      size: 1.12em;
-      margin: *;
-      background: color(back) no-repeat 50% 50%;
-      border: 0.14em solid color(accent);
-      border-radius: 50%;
-    }
+  :root::marker {
+    size: 1.12em;
+    margin: *;
+    background: color(back) no-repeat 50% 50%;
+    border: 0.14em solid color(accent);
+    border-radius: 50%;
+  }
 
-    :root:not(input)::marker {
-      margin: * * * 0.21em;
-    }
+  :root:not(input)::marker {
+    margin: * * * 0.21em;
+  }
 
-    :root:not(input)::marker:rtl {
-      margin: * 0.21em * *;
-    }
+  :root:not(input)::marker:rtl {
+    margin: * 0.21em * *;
+  }
 
-    //:root:active::marker { background-color: @HIGHLIGHT-HOVER; }
+  //:root:active::marker { background-color: @HIGHLIGHT-HOVER; }
 
-    :root:checked::marker {
-      background-image: url(stock:disk);
-      background-size: 0.63em;
-      fill: color(panel-text);
-    }
+  :root:checked::marker {
+    background-image: url(stock:disk);
+    background-size: 0.63em;
+    fill: color(panel-text);
+  }
 
-    :root:hover::marker {
-      fill: color(text);
-    }
+  :root:hover::marker {
+    fill: color(text);
+  }
 
-    :root:disabled {
-      color: color(disabled-text);
-    }
+  :root:disabled {
+    color: color(disabled-text);
+  }
 
-    :root:disabled::marker {
-      background-color: color(disabled-back);
-      fill: color(disabled-text);
-      border: color(disabled-text);
-    }
+  :root:disabled::marker {
+    background-color: color(disabled-back);
+    fill: color(disabled-text);
+    border: color(disabled-text);
+  }
 
-    :root:tab-focus {
-      @STD-TAB-FOCUS;
-    }
+  :root:tab-focus {
+    @STD-TAB-FOCUS;
+  }
 }
 
 radio {
@@ -181,73 +181,73 @@ radio {
 
 /* checkbox button */
 @set std-checkbox < std-checkbox-base {
-    :root {
-      height: @SMALL-ICON-SIZE;
-      width: @SMALL-ICON-SIZE;
-      vertical-align: middle;
-    }
+  :root {
+    height: @SMALL-ICON-SIZE;
+    width: @SMALL-ICON-SIZE;
+    vertical-align: middle;
+  }
 
-    :root:not(input) {
-      white-space: nowrap;
-      line-height: 1.4em;
-      padding: 0.25em 0.25em 0.25em 1.82em;
-      width: max-content;
-      height: 1.4em;
-    }
+  :root:not(input) {
+    white-space: nowrap;
+    line-height: 1.4em;
+    padding: 0.25em 0.25em 0.25em 1.82em;
+    width: max-content;
+    height: 1.4em;
+  }
 
-    :root::marker {
-      size: 1.05em;
-      margin: *;
-      background: color(back) no-repeat 60% 50%;
-      border: 0.14em solid color(border);
-    }
+  :root::marker {
+    size: 1.05em;
+    margin: *;
+    background: color(back) no-repeat 60% 50%;
+    border: 0.14em solid color(border);
+  }
 
-    :root:not(input)::marker {
-      margin: * * * 0.21em;
-    }
+  :root:not(input)::marker {
+    margin: * * * 0.21em;
+  }
 
-    :root:not(input)::marker:rtl {
-      margin: * 0.21em * *;
-    }
+  :root:not(input)::marker:rtl {
+    margin: * 0.21em * *;
+  }
 
-    :root:active::marker {
-      background-color: @HIGHLIGHT-HOVER;
-    }
+  :root:active::marker {
+    background-color: @HIGHLIGHT-HOVER;
+  }
 
-    :root:checked::marker {
-      background-image: url(path:M 0 3 L 3 6 L 9 0);
-      background-size: 0.93em;
-      stroke:color(accent-text);
-      stroke-width:0.14em;
-      background-color: color(accent);
-      border: color(accent);
-    }
+  :root:checked::marker {
+    background-image: url(path:M 0 3 L 3 6 L 9 0);
+    background-size: 0.93em;
+    stroke:color(accent-text);
+    stroke-width:0.14em;
+    background-color: color(accent);
+    border: color(accent);
+  }
 
-    :root[mixed]:empty::marker {
-      background-image: url(path:M 0 0 H 9 V 9 H 0 Z);
-      background-size: 0.63em;
-      background-position: 50% 50%;
-      fill: color(panel-text);
-      stroke: none;
-    }
+  :root[mixed]:empty::marker {
+    background-image: url(path:M 0 0 H 9 V 9 H 0 Z);
+    background-size: 0.63em;
+    background-position: 50% 50%;
+    fill: color(panel-text);
+    stroke: none;
+  }
 
-    :root:hover::marker {
-      border-color: color(hover-border);
-    }
+  :root:hover::marker {
+    border-color: color(hover-border);
+  }
 
-    :root:disabled {
-      color: color(disabled-text);
-    }
+  :root:disabled {
+    color: color(disabled-text);
+  }
 
-    :root:disabled::marker {
-      background-color: color(disabled-back);
-      stroke: color(disabled-text);
-      border: color(disabled-text);
-    }
+  :root:disabled::marker {
+    background-color: color(disabled-back);
+    stroke: color(disabled-text);
+    border: color(disabled-text);
+  }
 
-    :root:tab-focus {
-      @STD-TAB-FOCUS;
-    }
+  :root:tab-focus {
+    @STD-TAB-FOCUS;
+  }
 }
 
 checkbox {
