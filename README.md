@@ -223,7 +223,8 @@ sciter supports css level 2.1 in full and has some css 3 features
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 - supports `//` comments
 - [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
-- `@set` A style set is a named block of style rules
+- `@set` A style set is a named block of style rules (see below)
+- [`morph`](https://sciter.com/css-addons/) color transformation function
 
 ### all supported properties
 
