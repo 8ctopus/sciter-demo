@@ -222,7 +222,7 @@ sciter supports css level 2.1 in full and has some css 3 features
 - `@include "mime-type" url(...) [media types list]` inclusion of scripts from css
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 - supports `//` comments
-- [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
+- `@mixin` A named set of css properties (see below)
 - `@set` A style set is a named block of style rules (see below)
 - `morph` color transformation function (see below)
 - css 3 `currentcolor` keyword refers to the value of the color property
@@ -285,12 +285,46 @@ If library relies on extended/obscure features then it will need either porting 
 
 [Lottie](https://lottiefiles.com/) animations are supported.
 
-## style sets
+## mixin
+
+Mixin is a named set of css properties that can be applied by name to css rules.
+
+```css
+@mixin STD-BUTTON-DEFAULT
+{
+  padding: 0 1em;
+  border: 1dip solid black;
+  border-radius: 3dip;
+  background: linear-gradient(top, #3498db, #2980b9);
+  color: #ffffff;
+}
+```
+
+[https://sciter.com/mixin-feature-in-sciters-css/](https://sciter.com/mixin-feature-in-sciters-css/)
+
+## style set
+
+A style set is a named set of style declarations and it is a system of selectors and style definitions that are applied as the whole.
+
+```css
+@set button {
+  :root {
+    behavior: button;
+    flow: vertical;
+    @STD-BUTTON-DEFAULT;
+  }
+
+  :root:hover                   { @STD-BUTTON-HOVER; }
+  :root:focus                   { @STD-BUTTON-FOCUS; }
+  :root:disabled                { @STD-BUTTON-DISABLED; }
+}
+```
+
+Rules within a style set can only be overriden with `!important`.
 
 [https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/](https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/)
-[https://sciter.com/style-sets-in-h-smile-core/](https://sciter.com/style-sets-in-h-smile-core/)
 
-Rules within the styleset can only be overriden with `!important`.
+[https://sciter.com/style-sets-in-h-smile-core/](https://sciter.com/style-sets-in-h-smile-core/)
 
 ## fontawesome
 
