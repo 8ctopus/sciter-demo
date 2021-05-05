@@ -302,6 +302,7 @@ button > i {
 // improve icon position in button
 button > i:first-child {
   margin-right: 0.5em;
+  padding-left: -0.7em;
 }
 
 button > i:last-child {
