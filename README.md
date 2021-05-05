@@ -224,7 +224,7 @@ sciter supports css level 2.1 in full and has some css 3 features
 - supports `//` comments
 - [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
 - `@set` A style set is a named block of style rules (see below)
-- [`morph`](https://sciter.com/css-addons/) color transformation function
+- `morph` color transformation function (see below)
 
 ### all supported properties
 
@@ -248,6 +248,16 @@ Unlike vanilla css, css constants and variables are supported.
 
 [https://sciter.com/developers/for-web-programmers/css-constants/](https://sciter.com/developers/for-web-programmers/css-constants/)
 [https://sciter.com/css-variables-support/](https://sciter.com/css-variables-support/)
+
+### morph function
+
+[`morph`](https://sciter.com/css-addons/) is color transformation function.
+
+`color: morph(basecolor, transformation1:value1, transformation2:value2, ...)`
+
+basecolor is either a constant or a variable or `currentColor`
+
+example: `background-color: morph(currentColor, lighten:40%, opacity:50%)`
 
 ## javascript
 
