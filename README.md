@@ -223,7 +223,7 @@ sciter supports css level 2.1 in full and has some css 3 features
 - `size` shortcut property for `width` and `height`. If only one length value is provided then both width and height get the value. If there are two values then first one will go to width and second to height.
 - supports `//` comments
 - [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
-- [`@set`](https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/)
+- `@set` A style set is a named block of style rules
 
 ### all supported properties
 
@@ -260,7 +260,14 @@ In addition it contains storage in the form of a NoSQL MongoDB.
 
 ## animations
 
-Animations are supported using [Lottie](https://lottiefiles.com/).
+[Lottie](https://lottiefiles.com/) animations are supported.
+
+## style sets
+
+[https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/](https://terrainformatica.com/2007/04/20/css-extensions-in-h-smile-engine-part-i-style-sets/)
+[https://sciter.com/style-sets-in-h-smile-core/](https://sciter.com/style-sets-in-h-smile-core/)
+
+Rules within the styleset can only be overriden with `!important`.
 
 ## fontawesome
 
