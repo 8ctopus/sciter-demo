@@ -225,6 +225,8 @@ sciter supports css level 2.1 in full and has some css 3 features
 - [`@mixin`](https://sciter.com/mixin-feature-in-sciters-css/)
 - `@set` A style set is a named block of style rules (see below)
 - `morph` color transformation function (see below)
+- css 3 `currentcolor` keyword refers to the value of the color property
+- `foreground` property
 
 ### all supported properties
 
