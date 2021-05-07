@@ -281,6 +281,10 @@ If library relies on basic DOM features it may work as it is. Example: MithrilJS
 
 If library relies on extended/obscure features then it will need either porting or an external porting layer. [*](https://sciter.com/forums/topic/supported-javascript-graph-library/#post-71280)
 
+### jquery
+
+jQuery does not work in Sciter as JQuery was designed to support specific browsers, but [zepto.js](https://zeptojs.com/), a lightweight port of jQuery, works.
+
 ## animations
 
 [Lottie](https://lottiefiles.com/) animations are supported.
