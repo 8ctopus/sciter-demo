@@ -27,18 +27,17 @@ It showcases some of the sciter features I find interesting, namely:
 
 ## tutorials
 
-    https://sciter.com/tutorials/
+[https://sciter.com/tutorials/](https://sciter.com/tutorials/)
 
 ## sciter docs
 
-    https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md
+[https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md](https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md)
 
 ## html
 
 sciter supports all standard elements defined in the HTML5 specification with some additions:
 
-    https://sciter.com/developers/for-web-programmers/input-elements-map/
-
+[https://sciter.com/developers/for-web-programmers/input-elements-map/](https://sciter.com/developers/for-web-programmers/input-elements-map/)
 
 ### include
 
@@ -70,7 +69,13 @@ in sciter there's a shorter notation:
 <input|text(name) #info .blue>info</input>
 ```
 
-### [unique elements](https://sciter.com/developers/for-web-programmers/input-elements-map/)
+### unique elements
+
+[https://sciter.com/developers/for-web-programmers/input-elements-map/](https://sciter.com/developers/for-web-programmers/input-elements-map/)
+
+#### behavior
+
+[https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md/behaviors](https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md/behaviors)
 
 #### input
 
