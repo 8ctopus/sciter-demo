@@ -21,7 +21,21 @@
 </style>
 <script>
 
-document.ready = function () {
+"use strict";
+
+/**
+ * Test if strict javascript is used
+ * @return true if strict, false otherwise
+ * @note https://stackoverflow.com/a/18916788/10126479
+ */
+function isStrict()
+{
+    return eval("var __temp = null"), (typeof __temp === "undefined");
+}
+
+console.log(isStrict() ? "strict js" : "loose js");
+
+document.ready = function() {
     // get current window
     const window = Window.this;
 
