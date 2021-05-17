@@ -57,6 +57,11 @@ plaintext#lorem {
     width: 100%;
 }
 
+video {
+    width: 160dip;
+    height: 90dip;
+}
+
 </style>
 <script src="js/dialogs.js" />
 <script>
@@ -401,6 +406,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 
     <div .hbox>
+        <p>video</p>
+        <!-- taken from https://filesamples.com/formats/wmv -->
+        <video src="videos/sample.wmv" sizing="cover">cover</video>
+    </div>
+
+    <div .hbox>
         <p>more controls</p>
         <output|text name="first" value="output sample value" />
         <toolbar>
@@ -418,11 +429,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <input type="folder-path" />
         <input type="vslider" min=0 max=100 value=50 />
         <meter />
-        <input|vscrollbar />
-        <input|hscrollbar />
         -->
     </div>
-
 
     <div .hbox>
         <p><a href="https://lottiefiles.com/featured">animations</a></p>
