@@ -49,6 +49,10 @@ plaintext {
 @import url("css/std-menu.css");
 @import url("css/menu-bar.css");
 
+button.context-menu {
+    context-menu: selector(menu#context);
+}
+
 </style>
 <script src="js/dialogs.js" />
 <script>
@@ -227,6 +231,7 @@ async function loadcss() {
 
     <div .hbox>
         <p>menu</p>
+
         <!-- top level - menu bar, it must match ul#menu-bar selector, see std-menu.css -->
         <ul #menu-bar>
             <li>
@@ -327,6 +332,22 @@ async function loadcss() {
                 </menu>
             </li>
         </ul>
+
+        <button .context-menu>Menu on right click</button>
+        <menu.context id="context">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+            <li>
+                Sub menu
+                <menu>
+                    <li>item</li>
+                    <li>item</li>
+                </menu>
+            </li>
+
+        </menu>
     </div>
 
     <div .hbox>
