@@ -46,6 +46,8 @@ plaintext {
     height: 100dip;
 }
 
+@import url("css/std-menu.css");
+
 </style>
 <script src="js/dialogs.js" />
 <script>
@@ -220,6 +222,34 @@ async function loadcss() {
         <p>plaintext</p>
         <plaintext type="text/css" />
         <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+    </div>
+
+    <div .hbox>
+        <p>menu</p>
+        <!-- top level - menu bar, it must match ul#menu-bar selector, see std-menu.css -->
+        <ul #menu-bar>
+            <li>
+                <caption>File</caption>
+                <menu>
+                    <li #menu-open>Open</li>
+                    <li>Save</li>
+                </menu>
+            </li>
+            <li>
+                <caption>Edit</caption>
+                <menu>
+                    <li>Cut</li>
+                    <li>Copy</li>
+                    <li>Paste</li>
+                    <li>Convert
+                        <menu>
+                            <li>Uppercase</li>
+                            <li>Lowercase</li>
+                        </menu>
+                    </li>
+                </menu>
+            </li>
+        </ul>
     </div>
 
     <div .hbox>
