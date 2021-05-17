@@ -7,6 +7,8 @@ It showcases some of the sciter features I find interesting, namely:
 - javascript
 - themes
 
+![sciter demo screenshot](screenshot.png)
+
 ## sciter examples used:
 - sdk.js\samples\calc
 - sdk.js\samples.sciter\themes
