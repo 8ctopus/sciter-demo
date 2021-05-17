@@ -120,7 +120,7 @@ async function loadcss() {
         <editbox placeholder="input text here" />
         <editbox nullable placeholder="nullable" />
         <editbox disabled value="disabled" />
-        <input|password placeholder="password" />
+        <input|password placeholder="password" password-char="*" />
         <!-- https://github.com/c-smile/sciter-js-sdk/blob/main/docs/md/behaviors/behavior-masked-edit.md -->
         <input|masked mask="(###) ### - ####" />
         <!-- not working
@@ -357,11 +357,16 @@ async function loadcss() {
     </div>
 
     <div .hbox>
-        <p>more controls</p>
+        <p>date and time</p>
         <input|time />
         <input|date value="2021-05-09" firstdayofweek="1" timezone="local" />
         <!-- mode="days" | "months" | "years" | "century" -->
         <input|calendar value="2021-05-09" firstdayofweek="1" mode="days" />
+    </div>
+
+    <div .hbox>
+        <p>more controls</p>
+        <output|text name="first" value="output sample value" />
         <toolbar>
             <button />
             <button />
@@ -381,6 +386,7 @@ async function loadcss() {
         <input|hscrollbar />
         -->
     </div>
+
 
     <div .hbox>
         <p><a href="https://lottiefiles.com/featured">animations</a></p>
