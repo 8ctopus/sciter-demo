@@ -53,6 +53,10 @@ button.context-menu {
     context-menu: selector(menu#context);
 }
 
+plaintext#lorem {
+    width: 100%;
+}
+
 </style>
 <script src="js/dialogs.js" />
 <script>
@@ -204,8 +208,8 @@ async function loadcss() {
     <div .hbox>
         <p>progress</p>
         0: <progress value=0 max=100 />
-        50: <progress value=50 max=100 />
-        100: <progress value=100 max=100 />
+        50.2/100 <progress value=50.2 max=100 />
+        100/100.8: <progress value=100 max=100.8 />
         undetermined: <progress />
     </div>
 
@@ -225,8 +229,11 @@ async function loadcss() {
 
     <div .hbox>
         <p>plaintext</p>
-        <plaintext type="text/css" />
         <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+        <plaintext type="text/css" />
+        <plaintext|text #lorem readonly spellcheck=true>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </plaintext>
     </div>
 
     <div .hbox>
