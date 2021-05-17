@@ -109,7 +109,7 @@ async function loadcss() {
 
     <div .hbox>
         <p>editbox</p>
-        <editbox value="foo" placeholder="input with content" />
+        <editbox value="foo" placeholder="input with content" maxlength=6 filter="a~z" spellcheck="yes" />
         <editbox placeholder="input text here" />
         <editbox nullable placeholder="nullable" />
         <editbox disabled value="disabled" />
@@ -230,10 +230,13 @@ async function loadcss() {
     <div .hbox>
         <p>more controls</p>
         <input|time />
-        <input|date />
+        <input|date value="2021-05-09" firstdayofweek="1" timezone="local" />
         <!-- mode="days" | "months" | "years" | "century" -->
-        <input type="calendar" value="2021-05-09" firstdayofweek="1" mode="days" />
-
+        <input|calendar value="2021-05-09" firstdayofweek="1" mode="days" />
+        <toolbar>
+            <button />
+            <button />
+        </toolbar>
         <!-- more controls
         <button type="menu" />
         <button type="selector" />
