@@ -4,7 +4,7 @@
  *
  */
 
-/*top level menu*/
+/* top level menu */
 ul#menu-bar {
     behavior:menu-bar;
     flow: horizontal;
@@ -42,14 +42,14 @@ button[type="menu"]:owns-popup {
 
 /* popup menu */
 menu {
-    behavior: menu; /*is a menu*/
+    behavior: menu; /* is a menu */
     flow: vertical;
     display: none;
 
-    margin: 0;
     margin: 0 1dip; /* to offset it from parent li */
     max-width: max-intrinsic;
     /*min-width: max-intrinsic;*/
+
     border: 1dip solid threedshadow;
     padding: 1dip;
 
@@ -91,7 +91,6 @@ menu li:rtl {
     text-align: right;
     color: windowtext;
 }
-
 
 menu li:disabled {
     color: graytext;
@@ -138,7 +137,6 @@ menu li:current {
 menu hr {
     margin: 2dip;
 }
-
 
 /* radio menu item */
 menu li[type="radio"] {

@@ -1,0 +1,50 @@
+menu.bar {
+    aspect: MenuBar;
+    flow: horizontal;
+    display: block;
+
+    margin: 0;
+    width: *;
+    padding: 0 16dip 0 0; // to accommodate the arrow
+
+    border-spacing: 3dip;
+    overflow: hidden;
+}
+
+menu.bar.overflows {
+    foreground-image: url(stock:chevron-down);
+    foreground-position-top: 50%;
+    foreground-position-right: 2dip;
+    foreground-repeat: no-repeat;
+    foreground-size: 12dip 10dip;
+}
+
+menu > li {
+    behavior: file-icon;
+
+    padding-left: 20dip;
+
+    foreground-repeat: no-repeat;
+    foreground-position: 2dip 50%;
+    //foreground-image: url(images/unknown-icon.png);
+    color: black;
+}
+
+menu.bar > li {
+    behavior: clickable file-icon; // generates clicks
+
+    width: max-intrinsic;
+    max-width: 100dip;
+
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    line-height: 1.8em;
+}
+
+menu.bar > li:hover {
+    background: url(theme:list-view-item-selected) stretch;
+}
+
+menu.bar > li.over {
+    visibility: hidden;
+}
