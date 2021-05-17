@@ -144,9 +144,10 @@ async function loadcss() {
 
     <div .hbox>
         <p>radio</p>
-        <radio (rgroup) checked value="true">Yes</radio>
-        <radio (rgroup) value="false">No</radio>
-        <radio (rgroup) value="null">Undefined</radio>
+        <!-- as="string | integer | float | numeric | auto" -->
+        <radio (rgroup) checked value="true" as="string">Yes</radio>
+        <radio (rgroup) value="false" as="string">No</radio>
+        <radio (rgroup) value="null" as="string">Undefined</radio>
 
         <radio (rgroupd) disabled checked value="a">Disabled (Checked)</radio>
         <radio (rgroupd) disabled value="b">Disabled</radio>
@@ -231,9 +232,18 @@ async function loadcss() {
         <p>plaintext</p>
         <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
         <plaintext type="text/css" />
-        <plaintext|text #lorem readonly spellcheck=true>
+        <plaintext|text #lorem readonly spellcheck="true">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </plaintext>
+    </div>
+
+    <div .hbox>
+        <p>htmlarea</p>
+        <htmlarea>
+           <h3>Some HTML content</h3>
+           <p>Line 2</p>
+           <p>Line 3</p>
+        </htmlarea>
     </div>
 
     <div .hbox>
