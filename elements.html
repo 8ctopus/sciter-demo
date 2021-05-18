@@ -72,36 +72,40 @@ select[type="tree"] {
     width: max-content;
 }
 
-plaintext {
-    width: *;
-    height: 100dip;
+// temporary fix for vslider
+input[type=vslider] {
+    background-image: url(stock:block);
+    background-size: 100% length(slider-position);
+    fill: red;
 }
 
 @import url("css/std-menu.css");
 @import url("css/menu-bar.css");
 
 menu.bar {
-    width: max-content;
+    width: 280dip;
 }
 
 button.context-menu {
     context-menu: selector(menu#context);
 }
 
+plaintext {
+    width: *;
+    height: 100dip;
+}
+
 plaintext#lorem {
     width: 100%;
+}
+
+htmlarea {
+    width: 100dip;
 }
 
 video {
     width: 160dip;
     height: 90dip;
-}
-
-// temporary fix for vslider
-input[type=vslider] {
-    background-image: url(stock:block);
-    background-size: 100% length(slider-position);
-    fill: red;
 }
 
 </style>
@@ -547,9 +551,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <div .hbox>
         <p>htmlarea</p>
         <htmlarea>
-           <h3>Some HTML content</h3>
-           <p>Line 2</p>
-           <p>Line 3</p>
+           <p>paragraph</p>
+           <b>bold</b>
+           <i>italic</i>
         </htmlarea>
     </div>
 
@@ -564,7 +568,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <p>video</p>
         <!-- taken from https://filesamples.com/formats/wmv -->
         <!-- sizing - string, either: "cover" or "contain" (default). -->
-        <video src="videos/sample.wmv" sizing="cover">cover</video>
+        <video src="videos/sample.wmv" sizing="cover" autoplay loop>cover</video>
     </div>
 
     <div .hbox>
