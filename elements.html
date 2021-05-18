@@ -213,10 +213,19 @@ async function loadcss() {
 
     <div .hbox>
         <p>select|list</p>
-        <select|list>
+        <select|list multiple size=5>
             <option>Apple</option>
             <option selected>Apricot</option>
             <option>Currant</option>
+            <option selected>Grapefruit</option>
+            <option>Peach</option>
+            <option>Pomegranate</option>
+            <option>Tamarind</option>
+        </select>
+        <select|list multiple="checkmarks" size=5 dir="rtl">
+            <option>Apple</option>
+            <option checked>Apricot</option>
+            <option checked>Currant</option>
             <option>Grapefruit</option>
             <option>Peach</option>
             <option>Pomegranate</option>
@@ -387,7 +396,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     <li>item</li>
                 </menu>
             </li>
-
         </menu>
     </div>
 
