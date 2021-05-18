@@ -62,6 +62,13 @@ video {
     height: 90dip;
 }
 
+// temporary fix for vslider
+input[type=vslider] {
+    background-image: url(stock:block);
+    background-size: 100% length(slider-position);
+    fill: red;
+}
+
 </style>
 <script src="js/dialogs.js" />
 <script>
@@ -262,6 +269,8 @@ async function loadcss() {
         <p>slider</p>
         <slider min=0 max=100 value=50 />
         <slider disabled min=0 max=100 value=50 />
+        <input|hslider min=0 max=100 value=50 />
+        <input|vslider min=0 max=100 value=50 />
     </div>
 
     <div .hbox>
@@ -450,7 +459,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <select type="switch" />
         <input type="file-path" />
         <input type="folder-path" />
-        <input type="vslider" min=0 max=100 value=50 />
         <meter />
         -->
     </div>

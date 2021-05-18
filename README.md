@@ -234,6 +234,7 @@ sciter supports css level 2.1 in full and has some css 3 features
 - `morph` color transformation function (see below)
 - css 3 `currentcolor` keyword refers to the value of the color property
 - `foreground` property
+- `appearance` property that suppresses default visual styles
 
 ### all supported properties
 
