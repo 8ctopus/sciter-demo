@@ -41,6 +41,37 @@ p {
     text-align: center;
 }
 
+checkbox#checkbox-label {
+    flow: stack;
+}
+
+checkbox#checkbox-label > caption {
+    display:block;
+    visibility:hidden;
+}
+
+checkbox#checkbox-label:checked > caption.true {
+    visibility:visible;
+}
+
+checkbox#checkbox-label:not(:checked) > caption.false {
+    visibility:visible;
+}
+
+select[type="list"]#table {
+    flow: table;
+    width: 100%;
+    height: 60dip;
+}
+
+select[type="list"]#table option {
+    flow: table-row;
+}
+
+select[type="tree"] {
+    width: max-content;
+}
+
 plaintext {
     width: *;
     height: 100dip;
@@ -48,6 +79,10 @@ plaintext {
 
 @import url("css/std-menu.css");
 @import url("css/menu-bar.css");
+
+menu.bar {
+    width: max-content;
+}
 
 button.context-menu {
     context-menu: selector(menu#context);
@@ -67,32 +102,6 @@ input[type=vslider] {
     background-image: url(stock:block);
     background-size: 100% length(slider-position);
     fill: red;
-}
-
-select#table {
-    flow: table;
-    width: 100%;
-}
-
-select#table option {
-    flow: table-row;
-}
-
-checkbox#checkbox-label {
-    flow: stack;
-}
-
-checkbox#checkbox-label > caption {
-    display:block;
-    visibility:hidden;
-}
-
-checkbox#checkbox-label:checked > caption.true {
-    visibility:visible;
-}
-
-checkbox#checkbox-label:not(:checked) > caption.false {
-    visibility:visible;
 }
 
 </style>
@@ -366,6 +375,12 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <p>scrollbars</p>
+        <widget|vscrollbar for="plaintext#lorem" />
+        <widget|hscrollbar for="plaintext#lorem" />
+    </div>
+
+    <div .hbox>
         <p>dialogs</p>
         <button #info>info</button>
         <button #alert>alert</button>
@@ -373,30 +388,6 @@ async function loadcss() {
         <button #custom>custom</button>
         <button #file>select file</button>
         <button #folder>select folder</button>
-    </div>
-
-    <div .hbox>
-        <p>plaintext</p>
-        <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
-        <plaintext type="text/css" />
-        <plaintext|text #lorem readonly spellcheck="true">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </plaintext>
-    </div>
-
-    <div .hbox>
-        <p>scrollbars</p>
-        <widget|vscrollbar for="plaintext#lorem" />
-        <widget|hscrollbar for="plaintext#lorem" />
-    </div>
-
-    <div .hbox>
-        <p>htmlarea</p>
-        <htmlarea>
-           <h3>Some HTML content</h3>
-           <p>Line 2</p>
-           <p>Line 3</p>
-        </htmlarea>
     </div>
 
     <div .hbox>
@@ -458,36 +449,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 </menu>
             </li>
             <li>Inputs
-                <menu class="cool" id="test">
-                    <li type="radio" name="myradios" id="myradios-1">First radio item</li>
-                    <li type="radio" name="myradios" id="myradios-2">Second radio item</li>
-                    <li type="radio" name="myradios" id="myradios-3">Third radio item</li>
+                <menu>
+                    <li type="radio">First radio item</li>
+                    <li type="radio">Second radio item</li>
+                    <li type="radio">Third radio item</li>
                     <hr/>
-                    <li type="check" name="mychecks" id="mychecks-1">First check item</li>
-                    <li type="check" name="mychecks" id="mychecks-2">Second check item</li>
-                    <li type="check" name="mychecks" id="mychecks-3">Third check item</li>
+                    <li type="check">First check item</li>
+                    <li type="check">Second check item</li>
+                    <li type="check">Third check item</li>
                     <hr/>
-                    <li>Volume is <input type="hslider" name="volume" max="10" value="0" buddy="volume-buddy" /> <b id="volume-buddy">x</b> Db</li>
+                    <li>Volume is <input type="hslider" max="10" value="0" buddy="volume-buddy" /> <b id="volume-buddy">x</b> Db</li>
                 </menu>
             </li>
 
             <li>Complex
                 <menu class="cool">
                     <li>
-                        <input type="radio" name="myradios" id="myradios-1" />First
-                        <input type="radio" name="myradios" id="myradios-2" />Second
-                        <input type="radio" name="myradios" id="myradios-3" />Third
+                        <input type="radio" />First
+                        <input type="radio" />Second
+                        <input type="radio" />Third
                     </li>
                     <hr/>
-                    <li type="check" name="mychecks" id="mychecks-1">First check item</li>
-                    <li type="check" name="mychecks" id="mychecks-2">Second check item</li>
-                    <li type="check" name="mychecks" id="mychecks-2">Third check item</li>
+                    <li type="check">First check item</li>
+                    <li type="check">Second check item</li>
+                    <li type="check">Third check item</li>
                     <hr/>
                     <li>
-                        Status: <input type="progress" name="p2" maxvalue="100" value="25"/>
+                        Volume is <input type="hslider" max="10" value="0" step="0.1" buddy="volume-buddy2" /> <b id="volume-buddy2">x</b> Db
                     </li>
                     <li>
-                        Value: <input type="number" name="num" size=4 step=1 minvalue=0 maxvalue=100 value="25"/>
+                        Value: <input type="number" size=4 step=1 minvalue=0 maxvalue=100 value="25" />
                     </li>
                     <li>
                         <button name="just-a-button">Just a button</button>
@@ -534,18 +525,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 
     <div .hbox>
-        <p>fontawesome</p>
-        <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
-        <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
-    </div>
-
-    <div .hbox>
         <p>date and time</p>
-        <input|time value="now" />
-        <input|time value="11:00:00" no-seconds />
+        <div style="flow: horizontal; border-spacing: 1em;">
+            <input|time value="now" />
+            <input|time value="11:00:00" no-seconds />
+        </div>
         <input|date value="2021-05-09" firstdayofweek="1" timezone="local" />
         <!-- mode="days" | "months" | "years" | "century" -->
         <input|calendar value="2021-05-09" firstdayofweek="1" mode="days" />
+    </div>
+
+    <div .hbox>
+        <p>plaintext</p>
+        <button #plaintext src="sciter:ux-master.css" srctype="text/css">load</button>
+        <plaintext type="text/css" />
+        <plaintext|text #lorem readonly spellcheck="true">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </plaintext>
+    </div>
+
+    <div .hbox>
+        <p>htmlarea</p>
+        <htmlarea>
+           <h3>Some HTML content</h3>
+           <p>Line 2</p>
+           <p>Line 3</p>
+        </htmlarea>
+    </div>
+
+    <div .hbox>
+        <p><a href="https://lottiefiles.com/featured">animations</a></p>
+
+        <lottie src="images/animations/loading-anim.json" autoplay loop />
+        <lottie src="images/animations/icon-checked-green.json" autoplay loop />
     </div>
 
     <div .hbox>
@@ -556,8 +568,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 
     <div .hbox>
+        <p>fontawesome</p>
+        <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
+        <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
+    </div>
+
+    <div .hbox>
         <p>more controls</p>
-        <output|text name="first" value="output sample value" />
+        <output|text value="output sample value" />
         <toolbar>
             <button />
             <button />
@@ -568,13 +586,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <input type="folder-path" />
         <meter />
         -->
-    </div>
-
-    <div .hbox>
-        <p><a href="https://lottiefiles.com/featured">animations</a></p>
-
-        <lottie src="images/animations/loading-anim.json" autoplay loop />
-        <lottie src="images/animations/icon-checked-green.json" autoplay loop />
     </div>
 
 </body>
