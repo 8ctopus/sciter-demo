@@ -69,26 +69,60 @@ input[type=vslider] {
     fill: red;
 }
 
+select#table {
+    flow: table;
+    width: 100%;
+}
+
+select#table option {
+    flow: table-row;
+}
+
+checkbox#checkbox-label {
+    flow: stack;
+}
+
+checkbox#checkbox-label > caption {
+    display:block;
+    visibility:hidden;
+}
+
+checkbox#checkbox-label:checked > caption.true {
+    visibility:visible;
+}
+
+checkbox#checkbox-label:not(:checked) > caption.false {
+    visibility:visible;
+}
+
 </style>
 <script src="js/dialogs.js" />
 <script>
 
 // set dialog buttons on click event
-document.$("button#info").onclick = function () {
+document.$("button#info").onclick = function() {
     Window.this.modal(dialogInfo);
 };
 
-document.$("button#alert").onclick = function () {
+document.$("button#alert").onclick = function() {
     Window.this.modal(dialogAlert);
 };
 
-document.$("button#error").onclick = function () {
+document.$("button#error").onclick = function() {
     Window.this.modal(dialogError);
 };
 
-document.$("button#custom").onclick = function () {
+document.$("button#custom").onclick = function() {
     Window.this.modal(dialogQuestion);
 };
+
+document.$("button#file").onclick = function() {
+    const file = Window.this.selectFile("Select file");
+}
+
+document.$("button#folder").onclick = function() {
+    const folder = Window.this.selectFolder("Select folder");
+}
 
 // set load css
 document.on("click", "button#plaintext", loadcss);
@@ -173,6 +207,11 @@ async function loadcss() {
 
         <checkbox disabled checked value="a">Disabled (Checked)</checkbox>
         <checkbox disabled value="b">Disabled</checkbox>
+
+        <checkbox #checkbox-label checked>
+            <caption .true>checked state</caption>
+            <caption .false>unchecked state</caption>
+        </checkbox>
     </div>
 
     <div .hbox>
@@ -182,7 +221,24 @@ async function loadcss() {
             <option>Yes</option>
         </toggle>
 
+        <hr />
+        no label
         <toggle (bar) />
+
+        <hr />
+        group
+        <toggle|radio(group) value="A" />
+        <toggle|radio(group) value="B" />
+        <toggle|radio(group) value="C" />
+    </div>
+
+    <div .hbox>
+        <p>select|switch</p>
+        <select|switch>
+            <option>Left</option>
+            <option>Center</option>
+            <option>Right</option>
+        </select>
     </div>
 
     <div .hbox>
@@ -216,6 +272,26 @@ async function loadcss() {
             <option>Pomegranate</option>
             <option>Tamarind</option>
         </select>
+
+        <select|dropdown>
+            <option>One</option>
+            <optgroup label="Group 1">
+                <option>Two</option>
+                <option.toset>Three</option>
+                <option>Four</option>
+            </optgroup>
+            <optgroup>
+                <caption>Group 2</caption>
+                <option>Five</option>
+                <option>Six</option>
+                <option>Seven</option>
+                <option>Eight</option>
+            </optgroup>
+            <option>Nine</option>
+            <option>Ten</option>
+            <option>Eleven</option>
+            <option>Twelve</option>
+        </select>
     </div>
 
     <div .hbox>
@@ -238,10 +314,25 @@ async function loadcss() {
             <option>Pomegranate</option>
             <option>Tamarind</option>
         </select>
+        <select|list #table size=3>
+            <option value="1">
+                <span>1</span>
+                <span>Fox</span>
+            </option>
+            <option value="2">
+                <span>2</span>
+                <span>Bravo</span>
+            </option>
+            <option value="3">
+                <span>3</span>
+                <span>Alpha</span>
+            </option>
+        </select>
     </div>
 
     <div .hbox>
-        <select|tree multiple="checkmarks">
+        <p>select|tree</p>
+        <select|tree multiple="checkmarks" treelines>
             <option expanded>
                 <caption>Fruits</caption>
                 <option value="1" selected>Apple</option>
@@ -259,16 +350,17 @@ async function loadcss() {
 
     <div .hbox>
         <p>progress</p>
+        indefinite: <progress />
         0: <progress value=0 max=100 />
         50.2/100 <progress value=50.2 max=100 />
         100/100.8: <progress value=100 max=100.8 />
-        undetermined: <progress />
     </div>
 
     <div .hbox>
         <p>slider</p>
         <slider min=0 max=100 value=50 />
         <slider disabled min=0 max=100 value=50 />
+        <slider min=0 max=100 value=50 buddy="p1a-buddy" step="3" /><b id="p1a-buddy">x</b>
         <input|hslider min=0 max=100 value=50 />
         <input|vslider min=0 max=100 value=50 />
     </div>
@@ -279,6 +371,8 @@ async function loadcss() {
         <button #alert>alert</button>
         <button #error>error</button>
         <button #custom>custom</button>
+        <button #file>select file</button>
+        <button #folder>select folder</button>
     </div>
 
     <div .hbox>
@@ -409,7 +503,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </li>
         </ul>
 
-        <button .context-menu>Menu on right click</button>
+        <button type="menu">Left click menu
+            <menu class="office">
+                <li title="hello!">First item</li>
+                <li>Second item</li>
+                <li>Third item
+                    <menu>
+                        <li>First sub-item</li>
+                        <li>Second sub-item</li>
+                    </menu>
+                </li>
+                <li>Fourth item</li>
+            </menu>
+        </button>
+
+        <button .context-menu>Right click menu</button>
         <menu .context #context >
             <li>First item</li>
             <li>Second item</li>
@@ -455,9 +563,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <button />
         </toolbar>
         <!-- more controls
-        <button type="menu" />
         <button type="selector" />
-        <select type="switch" />
         <input type="file-path" />
         <input type="folder-path" />
         <meter />
