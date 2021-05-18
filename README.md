@@ -2,16 +2,11 @@
 
 This is a [sciter.js](https://sciter.com/) demo app built from multiple sciter samples.
 
-It showcases some of the sciter features I find interesting, namely:
-- components: buttons, checkboxes, ...
-- javascript
-- themes
+It showcases :
+- all sciter elements (components) I could find
+- theming
 
 ![sciter demo screenshot](screenshot.png)
-
-## sciter examples used:
-- sdk.js\samples\calc
-- sdk.js\samples.sciter\themes
 
 ## get started
 
