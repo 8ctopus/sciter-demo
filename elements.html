@@ -234,6 +234,23 @@ async function loadcss() {
     </div>
 
     <div .hbox>
+        <select|tree multiple="checkmarks">
+            <option expanded>
+                <caption>Fruits</caption>
+                <option value="1" selected>Apple</option>
+                <option value="2">Apricot</option>
+                <option value="3">Currant</option>
+            </option>
+            <option>
+                <caption>Veggies</caption>
+                <option value="4">Cabbage</option>
+                <option value="5">Broccoli</option>
+                <option value="6">Chicory</option>
+            </option>
+        </select>
+    </div>
+
+    <div .hbox>
         <p>progress</p>
         0: <progress value=0 max=100 />
         50.2/100 <progress value=50.2 max=100 />
@@ -430,10 +447,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         <!-- more controls
         <button type="menu" />
         <button type="selector" />
-        <select type="select" multiple="checkmarks" />
         <select type="switch" />
-        <select type="list" multiple="checks" />
-        <select type="tree" />
         <input type="file-path" />
         <input type="folder-path" />
         <input type="vslider" min=0 max=100 value=50 />
