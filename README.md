@@ -194,10 +194,10 @@ Use this instead:
 
 ```js
 // option 1
-document.$("#info").onclick = log;
+document.$("button#info").onclick = log;
 
 // option 2
-document.on("click", "button#info", log);
+document.$("button#info").on("click", log);
 
 function log()
 {
@@ -207,6 +207,7 @@ function log()
 <button #info>info</button>
 ```
 
+There's [another project that explores event in more details](https://github.com/8ctopus/sciter-events)
 
 ## css
 
