@@ -164,8 +164,7 @@ document.$("button#folder").onclick = function() {
 
 // set load css
 document.on("click", "button#plaintext", loadcss);
-
-document.ready = loadcss;
+document.on("ready", loadcss);
 
 
 /**

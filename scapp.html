@@ -35,7 +35,7 @@ function isStrict()
 
 console.log(isStrict() ? "strict js" : "loose js");
 
-document.ready = function() {
+document.on("ready", function() {
     // get current window
     const window = Window.this;
 
@@ -45,7 +45,7 @@ document.ready = function() {
 
     // move window
     //window.move(0, 0);
-}
+});
 
 document.on("input", "form#config", function(evt, form) {
     // set document light/dark mode
