@@ -139,36 +139,41 @@ video {
 
 // set dialog buttons on click event
 document.on("click", "button", function(event, element) {
+    let value;
+
     switch (element.id) {
         case "info":
-            Window.this.modal(dialogInfo);
+            value = Window.this.modal(dialogInfo);
             break;
 
         case "alert":
-            Window.this.modal(dialogAlert);
+            value = Window.this.modal(dialogAlert);
             break;
 
         case "error":
-            Window.this.modal(dialogError);
+            value = Window.this.modal(dialogError);
             break;
 
         case "question":
-            Window.this.modal(dialogQuestion);
+            value = Window.this.modal(dialogQuestion);
             break;
 
         case "file":
-            const file = Window.this.selectFile("Select file");
+            value = Window.this.selectFile("Select file");
             break;
 
         case "folder":
-            const folder = Window.this.selectFolder("Select folder");
+            value = Window.this.selectFolder("Select folder");
             break;
 
         default:
             console.error("unknown element");
             break;
     }
+
+    console.log("return value: " + value);
 });
+
 
 // set load css
 document.on("click", "button#plaintext", loadcss);
