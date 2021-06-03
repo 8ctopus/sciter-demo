@@ -138,29 +138,37 @@ video {
 <script>
 
 // set dialog buttons on click event
-document.$("button#info").onclick = function() {
-    Window.this.modal(dialogInfo);
-};
+document.on("click", "button", function(event, element) {
+    switch (element.id) {
+        case "info":
+            Window.this.modal(dialogInfo);
+            break;
 
-document.$("button#alert").onclick = function() {
-    Window.this.modal(dialogAlert);
-};
+        case "alert":
+            Window.this.modal(dialogAlert);
+            break;
 
-document.$("button#error").onclick = function() {
-    Window.this.modal(dialogError);
-};
+        case "error":
+            Window.this.modal(dialogError);
+            break;
 
-document.$("button#custom").onclick = function() {
-    Window.this.modal(dialogQuestion);
-};
+        case "question":
+            Window.this.modal(dialogQuestion);
+            break;
 
-document.$("button#file").onclick = function() {
-    const file = Window.this.selectFile("Select file");
-}
+        case "file":
+            const file = Window.this.selectFile("Select file");
+            break;
 
-document.$("button#folder").onclick = function() {
-    const folder = Window.this.selectFolder("Select folder");
-}
+        case "folder":
+            const folder = Window.this.selectFolder("Select folder");
+            break;
+
+        default:
+            console.error("unknown element");
+            break;
+    }
+});
 
 // set load css
 document.on("click", "button#plaintext", loadcss);
@@ -413,7 +421,7 @@ async function loadcss() {
         <button #info>info</button>
         <button #alert>alert</button>
         <button #error>error</button>
-        <button #custom>custom</button>
+        <button #question>question</button>
         <button #file>select file</button>
         <button #folder>select folder</button>
     </div>
