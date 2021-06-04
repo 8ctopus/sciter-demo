@@ -246,7 +246,8 @@ sciter does not support `display: flex`, you need to use the custom css property
 
 Density independent pixels is an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
 
-See [https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp](https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp)
+See [https://sciter.com/road-to-sciter-js-step-i-supports-px-ppx-dip/](https://sciter.com/road-to-sciter-js-step-i-supports-px-ppx-dip/)
+[https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp](https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp)
 
 ### constants and variables
 
