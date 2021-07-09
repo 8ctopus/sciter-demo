@@ -58,10 +58,10 @@ html > header > window-buttons {
 
 // window button
 html > header > window-buttons > window-button {
+    behavior: clickable;
+
     width: window-button-width;
     height: *;
-
-    behavior: clickable;
 
     border-radius: 0;
 
