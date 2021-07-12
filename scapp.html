@@ -36,18 +36,6 @@ function isStrict()
 
 console.log(isStrict() ? "strict js" : "loose js");
 
-document.on("ready", function() {
-    // get current window
-    const window = Window.this;
-
-    if (window.state != Window.WINDOW_MAXIMIZED)
-        // maximize window
-        window.state = Window.WINDOW_MAXIMIZED;
-
-    // move window
-    //window.move(0, 0);
-});
-
 document.on("input", "form#config", function(evt, form) {
     // set document light/dark mode
     document.attributes["theme"] = form.value.mode;
