@@ -1,0 +1,5 @@
+{
+    "require": {
+        "https://github.com/8ctopus/sciter-fontawesome": "1.0.0"
+    }
+}
