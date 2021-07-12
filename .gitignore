@@ -1,5 +1,9 @@
 /inspector.exe
 /scapp.exe
 /sciter.dll
+/spm.phar
+/spm
 
 /*.sublime-workspace
+
+/vendor/
