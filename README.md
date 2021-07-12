@@ -14,13 +14,9 @@ It showcases :
 - run `install.bat` to download the latest sciter binaries and library
 - run `scapp.bat`
 - to refresh the app after changes to the html/css click `F5`
+- click `CTRL + SHIFT + left click` to inspect an element
 
 # sciter tips/caveats
-
-## debug app
-- start `inspector.exe`
-- inside the `scapp.exe` window click `CTRL + SHIFT + I` to connect to the inspector
-- inside the `scapp.exe` window click `CTRL + SHIFT + left click` to inspect element in the inspector
 
 ## tutorials
 
