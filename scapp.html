@@ -7,9 +7,10 @@
     window-blurbehind="light"
     theme="light">
 <head>
-<style src="css/controls.css" />
-<style src="css/window.css" />
 <style>
+
+@import url(css/controls.css);
+@import url(css/window.css);
 
 .hbox {
     margin-right: 1em;
@@ -20,9 +21,7 @@
 
 </style>
 <script src="js/utils.js" />
-<script>
-
-"use strict";
+<script type="module">
 
 /**
  * Test if strict javascript is used
@@ -41,7 +40,7 @@ document.on("input", "form#config", function(evt, form) {
     document.attributes["theme"] = form.value.mode;
 
     // get elements frame
-    var frame = document.$("frame");
+    const frame = document.$("frame");
 
     // set frame theme
     frame.attributes["content-style"] = form.value.theme;
