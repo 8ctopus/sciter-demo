@@ -1,8 +1,9 @@
 <html ui-size=normal>
 <head>
-<style src="css/controls.css" />
-<style src="vendor/8ctopus/sciter-fontawesome/src/css/fontawesome.css" />
 <style>
+
+@import url(vendor/8ctopus/sciter-fontawesome/src/css/fontawesome.css);
+@import url(css/controls.css);
 
 html {
     background: color(panel);
@@ -103,7 +104,9 @@ video {
 
 </style>
 <script src="js/dialogs.js" />
-<script>
+<script type="module">
+
+import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
 
 // set dialog buttons on click event
 document.on("click", "button", function(event, element) {
@@ -142,17 +145,26 @@ document.on("click", "button", function(event, element) {
     console.log("return value: " + value);
 });
 
+document.on("ready", function() {
+    // get console from iframe parent
+    console = Window.this.document.globalThis.console;
 
-// set load css
-document.on("click", "button#plaintext", loadcss);
-document.on("ready", loadcss);
+    // add support for F5 reload
+    utils.addReloadWindow();
+
+    loadcss();
+
+    // set load css
+    document.on("click", "button#plaintext", loadcss);
+});
 
 
 /**
  * Load file into plaintext
  * @return void
  */
-async function loadcss() {
+async function loadcss()
+{
     const plaintext = document.$("plaintext");
 
     try {
