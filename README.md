@@ -8,14 +8,13 @@ It showcases :
 
 ![sciter demo screenshot](screenshot.png)
 
-## get started
+## demo
 
 - git clone the repository
-- run `install.bat` to download the latest sciter binaries, library and the sciter package manager
+- run `install.bat` to download the latest sciter binaries and the sciter package manager
 - install packages `php spm.phar install`
 - run `scapp.bat`
 - to refresh the app after changes to the html/css click `F5`
-- click `CTRL + SHIFT + left click` to inspect an element
 
 # sciter tips/caveats
 
