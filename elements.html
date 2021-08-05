@@ -113,6 +113,9 @@ document.on("ready", function() {
     // get console from iframe parent
     logger.setConsole();
 
+    // capture unhandled exceptions
+    logger.capture();
+
     // add support for F5 reload
     utils.addReloadWindow();
 
