@@ -108,6 +108,7 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
 
 #### frames
 
+- `<frame>` represents a nested browsing context, embedding another HTML page into the current one.
 - `<frameset>` child elements to be resizable window blocks
 
 ### unique attributes
