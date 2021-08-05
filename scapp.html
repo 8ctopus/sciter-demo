@@ -31,13 +31,19 @@ plaintext#logger {
 import {logger} from "vendor/8ctopus/sciter-logger/src/logger.js";
 import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
 
+// initialize logger
+logger.init("", false);
+
+// attach logger to console
+logger.attach();
+
+// capture unhandled exceptions
+logger.capture();
+
 document.on("ready", function(event, element) {
     // ignore iframe ready event
     if (element.parentElement)
         return;
-
-    // initialize logger
-    logger.init("", false);
 
     // subscribe to logger messages
     logger.subscribe(function(level, message) {
@@ -48,12 +54,6 @@ document.on("ready", function(event, element) {
         // scroll to last item
         log.lastElementChild.scrollIntoView({behavior: "smooth"});
     });
-
-    // attach logger to console
-    logger.attach();
-
-    // capture unhandled exceptions
-    logger.capture();
 
     // add support for F5 reload
     utils.addReloadWindow();
@@ -68,7 +68,9 @@ document.on("ready", function(event, element) {
     // maximize window
     Window.this.state = Window.WINDOW_MAXIMIZED;
 
-    console.debug(isStrict() ? "strict js" : "loose js");
+    //console.debug(isStrict() ? "strict js" : "loose js");
+
+    console.debug("Document ready - OK");
 });
 
 document.on("input", "form#config", function(evt, form) {

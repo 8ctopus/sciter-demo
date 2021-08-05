@@ -106,7 +106,21 @@ video {
 <script src="js/dialogs.js" />
 <script type="module">
 
+import {logger} from "vendor/8ctopus/sciter-logger/src/logger.js";
 import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
+
+document.on("ready", function() {
+    // get console from iframe parent
+    logger.setConsole();
+
+    // add support for F5 reload
+    utils.addReloadWindow();
+
+    loadcss();
+
+    // set load css
+    document.on("click", "button#plaintext", loadcss);
+});
 
 // set dialog buttons on click event
 document.on("click", "button", function(event, element) {
@@ -144,20 +158,6 @@ document.on("click", "button", function(event, element) {
 
     console.log("return value: " + value);
 });
-
-document.on("ready", function() {
-    // get console from iframe parent
-    console = Window.this.document.globalThis.console;
-
-    // add support for F5 reload
-    utils.addReloadWindow();
-
-    loadcss();
-
-    // set load css
-    document.on("click", "button#plaintext", loadcss);
-});
-
 
 /**
  * Load file into plaintext
