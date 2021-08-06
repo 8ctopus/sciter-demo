@@ -58,8 +58,17 @@ document.on("ready", function(event, element) {
     // add support for F5 reload
     utils.addReloadWindow();
 
+    // close window on escape
+    utils.closeWindowOnEscape();
+
     // center window on screen
-    utils.centerWindow();
+    utils.centerWindow("screen");
+
+    // bring window to front
+    utils.windowToFront();
+
+    // log sciter version
+    console.debug(utils.sciterInfo());
 
     // fix issues with window not maxmizing itself on f5
     if (Window.this.state === Window.WINDOW_MAXIMIZED)
