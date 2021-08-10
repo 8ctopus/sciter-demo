@@ -241,12 +241,14 @@ sciter does not support `display: flex`, you need to use the custom css property
 
 ### pixels
 
-- 1ppx = 1 physical screen pixel
-- 1dip = 1px = 1/96th of an inch = 0.264583mm
+- 1`ppx` = 1 physical screen pixel
+- 1`dip` = 1/96th of an inch = 0.264583mm
 
-Density independent pixel (dip) is an abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dip is one pixel on a 160 dpi screen. The ratio of dip-to-pixel will change with the screen density, but not necessarily in direct proportion.
+One `dip` is one `ppx` on a 96 DPI screen.
 
-*1px can be either 1dip or 1ppx depending on SCITER_SET_PX_AS_DIP setting.*
+*1px can be either 1`dip` or 1`ppx` depending on SCITER_SET_PX_AS_DIP setting.*
+
+In order to have your application size consistently accross screens with different DPI, use `dip`.
 
 See [https://sciter.com/road-to-sciter-js-step-i-supports-px-ppx-dip/](https://sciter.com/road-to-sciter-js-step-i-supports-px-ppx-dip/)
 
