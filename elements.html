@@ -169,7 +169,7 @@ async function loadcss()
     const plaintext = document.$("plaintext");
 
     try {
-        var r = await fetch("css/style.css");
+        var r = await fetch("css/window.css");
 
         if (r.ok) {
             plaintext.value = r.text();
