@@ -241,8 +241,8 @@ sciter does not support `display: flex`, you need to use the custom css property
 
 ### pixels
 
-- 1`ppx` = 1 physical screen pixel
-- 1`dip` = 1/96th of an inch = 0.264583mm
+- 1`ppx` = 1 physical screen pixel = actual size depends of screen resolution
+- 1`dip` = 1/96th of an inch = 0.264583mm = actual size does not depend on screen resolution
 
 One `dip` is one `ppx` on a 96 DPI screen.
 
