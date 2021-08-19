@@ -89,6 +89,13 @@ in sciter there's a shorter notation:
 - `<button type="selector">...</button>` button with popup list of options defined in a separate popup element
 - `<button type="menu">...<menu></button>` button with popup menu
 
+#### output
+
+- `<output type="text" value="text" />`
+- `<output type="integer" value=1 />`
+- `<output type="integer" value=1 />`
+- `<output type="time-local" format="long|short" />`
+
 #### select
 
 Select elements support `multiple` and `multiple=checkmarks` attributes to allow multi-select list functionality
@@ -98,10 +105,12 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
 - `<select type="tree">` select element with `<option>`s organized in hierarchical tree
 
 #### popup menus
+
 - `<popup>` popup element (preferred to be placed in `<head>`). You can show popup with Element.popupAt.
 - `<menu .context>` context-menu styled element
 
 #### text editors
+
 - `<textarea>` standard plain text editor
 - `<plaintext>` plain source code editor with line numbers and optional syntax highlighter, each line is a `<text>` element
 - `<htmlarea>` ready to use WYSIWYG HTML editor

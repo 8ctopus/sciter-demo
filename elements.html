@@ -121,6 +121,24 @@ document.on("ready", function() {
 
     // set load css
     document.on("click", "button#plaintext", loadcss);
+
+    // set output time
+    const time = document.$("output[type=time-local]");
+
+    time.value = new Date();
+
+    time.timer(1000, function() {
+        time.value = new Date();
+        return true;
+    });
+
+    const form = document.$("form#output");
+
+    form.value = {
+        field1: "hello",
+        field2: "world",
+        field3: 1,
+    };
 });
 
 // set dialog buttons on click event
@@ -596,6 +614,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 
     <div .hbox>
+        <p>output</p>
+        <output|time-local format="long" />
+        <output|text value="output sample value" />
+        <output|integer value=4 />
+
+        <!-- see in code how the output values get set -->
+        <form #output>
+            <output|text(field1) />
+            <output|text(field2) />
+            <output|integer(field3) />
+        </form>
+    </div>
+
+    <div .hbox>
         <p>fontawesome</p>
         <i class="fas fa-star"></i>test<i class="fas fa-star"></i>
         <button><i class="fas fa-star"></i>Do it!<i class="fas fa-star"></i></button><i class="fas fa-star"></i>
@@ -603,7 +635,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
     <div .hbox>
         <p>more controls</p>
-        <output|text value="output sample value" />
         <toolbar>
             <button />
             <button />
