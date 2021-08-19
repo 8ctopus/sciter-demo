@@ -32,7 +32,7 @@ import {logger} from "vendor/8ctopus/sciter-logger/src/logger.js";
 import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
 
 // initialize logger
-logger.init("", false);
+logger.init();
 
 // attach logger to console
 logger.attach();
@@ -46,14 +46,7 @@ document.on("ready", function(event, element) {
         return;
 
     // subscribe to logger messages
-    logger.subscribe(function(level, message) {
-        const log = document.$("plaintext#logger");
-
-        log.append(JSX(level, {}, [message]));
-
-        // scroll to last item
-        log.lastElementChild.scrollIntoView({behavior: "smooth"});
-    });
+    logger.plaintext(document.$("plaintext#logger"));
 
     // add support for F5 reload
     utils.addReloadWindow();
