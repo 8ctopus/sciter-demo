@@ -6,6 +6,8 @@ It showcases :
 - all sciter elements (components) I could find
 - theming
 
+If you're looking at creating your first sciter.js app, check my other [project](https://github.com/8ctopus/sciter-demo-app).
+
 ![sciter demo screenshot](screenshot.png)
 
 ## demo
