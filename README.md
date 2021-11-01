@@ -298,7 +298,7 @@ If library is pure JS one then it should work as it is in sciter. Example: Remar
 
 If library relies on basic DOM features it may work as it is. Example: MithrilJS that works as it is in sciter.
 
-If library relies on extended/obscure features then it will need either porting or an external porting layer. [*](https://sciter.com/forums/topic/supported-javascript-graph-library/#post-71280)
+If library relies on extended/obscure features then it will need either porting or an external porting layer. [see](https://sciter.com/forums/topic/supported-javascript-graph-library/#post-71280)
 
 ### jquery
 
