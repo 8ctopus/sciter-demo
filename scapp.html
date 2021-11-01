@@ -3,6 +3,7 @@
     window-resizable="true"
     window-width="750dip"
     window-height="1024dip"
+    window-state="maximized"
     window-icon="images/seastar.svg"
     window-blurbehind="light"
     theme="light">
@@ -55,16 +56,6 @@ document.ready = function() {
 
     // center window on screen
     utils.centerWindow(Window.this, "screen");
-
-    // bring window to front
-    utils.windowToFront(Window.this);
-
-    // fix issues with window not maxmizing itself on f5
-    if (Window.this.state === Window.WINDOW_MAXIMIZED)
-        Window.this.state = Window.WINDOW_MINIMIZED;
-
-    // maximize window
-    Window.this.state = Window.WINDOW_MAXIMIZED;
 
     //console.debug(isStrict() ? "strict js" : "loose js");
 
