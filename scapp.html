@@ -40,11 +40,7 @@ logger.attach();
 // capture unhandled exceptions
 logger.capture();
 
-document.on("ready", function(event, element) {
-    // ignore iframe ready event
-    if (element.parentElement)
-        return;
-
+document.ready = function() {
     // subscribe to logger messages
     logger.plaintext(document.$("plaintext#logger"));
 
@@ -73,7 +69,7 @@ document.on("ready", function(event, element) {
     //console.debug(isStrict() ? "strict js" : "loose js");
 
     console.debug("Document ready - OK");
-});
+}
 
 document.on("input", "form#config", function(evt, form) {
     // set document light/dark mode
