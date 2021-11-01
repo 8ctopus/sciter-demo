@@ -3,7 +3,7 @@ curl -LO https://github.com/c-smile/sciter-js-sdk/raw/cb9daceb84f6e49e56dee816b4
 curl -LO https://github.com/c-smile/sciter-js-sdk/raw/cb9daceb84f6e49e56dee816b4de7d5ddb2829e1/bin/windows/x32/inspector.exe
 curl -LO https://github.com/c-smile/sciter-js-sdk/raw/cb9daceb84f6e49e56dee816b4de7d5ddb2829e1/bin/windows/x32/sciter.dll
 
-REM sciter package manager 0.1.6
-curl -LO https://github.com/8ctopus/sciter-package-manager/releases/download/0.1.6/spm.phar
+REM sciter package manager 0.2.1
+curl -LO https://github.com/8ctopus/sciter-package-manager/releases/download/0.2.1/spm.phar
 
 pause
