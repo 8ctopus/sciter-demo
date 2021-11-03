@@ -6,17 +6,17 @@ It showcases :
 - all sciter elements (components) I could find
 - theming
 
-If you're looking at creating your first sciter.js app, check my other [project](https://github.com/8ctopus/sciter-demo-app).
+If you're looking at creating your first sciter.js app, [check my other project](https://github.com/8ctopus/sciter-demo-app).
 
 ![sciter demo screenshot](screenshot.png)
 
 ## demo
 
 - git clone the repository
-- on Mac only `chmod +x install.sh scapp.sh`
-- run `install.bat` on Windows or `./install.sh` on Mac to download the latest sciter binaries and the sciter package manager
+- on Linux/Mac `chmod +x install.sh scapp.sh`
+- run `install.bat` (Win) or `./install.sh` (Linux/Mac) to download the latest sciter binaries and the sciter package manager
 - install packages `php bin/spm.phar install`
-- run `scapp.bat` or `./scapp.sh`
+- run `scapp.bat` (Win) or `./scapp.sh` (Linux/Mac)
 
 # sciter tips/caveats
 
