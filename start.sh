@@ -20,12 +20,12 @@ case "${machine}" in
 
 "windows")
     start bin/win-x32/inspector.exe
-    start bin/win-x32/scapp.exe scapp.html --debug
+    start bin/win-x32/scapp.exe main.html --debug
     ;;
 
 "linux")
     bin/linux/inspector &
-    bin/linux/scapp scapp.html --debug &
+    bin/linux/scapp main.html --debug &
     ;;
 
 "macosx")
@@ -33,7 +33,7 @@ case "${machine}" in
     open -a inspector.app
 
     # open scapp application in debug mode
-    bin/macosx/scapp scapp.html --debug &
+    bin/macosx/scapp main.html --debug &
     ;;
 
 esac

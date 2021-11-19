@@ -13,10 +13,10 @@ If you're looking at creating your first sciter.js app, [check my other project]
 ## demo
 
 - git clone the repository
-- on Linux/Mac `chmod +x install.sh scapp.sh`
+- on Linux/Mac `chmod +x install.sh start.sh`
 - run `install.bat` (Win) or `./install.sh` (Linux/Mac) to download the latest sciter binaries and the sciter package manager
 - install packages `php bin/spm.phar install`
-- run `scapp.bat` (Win) or `./scapp.sh` (Linux/Mac)
+- run `start.bat` (Win) or `./start.sh` (Linux/Mac)
 
 # sciter tips/caveats
 
