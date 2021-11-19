@@ -39,7 +39,7 @@ logger.init();
 logger.attach();
 
 // capture unhandled exceptions
-logger.capture();
+logger.capture(unhandledExceptionHandler);
 
 document.ready = function() {
     // subscribe to logger messages
@@ -56,6 +56,12 @@ document.ready = function() {
 
     // center window on screen
     utils.centerWindow(Window.this, "screen");
+
+    // bring window to front
+    //utils.windowToFront(Window.this);
+
+    // bring window to front and set input focus
+    Window.this.activate(true);
 
     //console.debug(isStrict() ? "strict js" : "loose js");
 
@@ -91,6 +97,17 @@ document.on("input", "form#config", function(evt, form) {
 function isStrict()
 {
     return eval("var __temp = null"), (typeof __temp === "undefined");
+}
+
+/**
+ * Unhandled exception handler
+ * @param  Error|String e
+ * @return void
+ */
+function unhandledExceptionHandler(e)
+{
+    // log exception using exception if it exists, error otherwise
+    typeof console.exception === "function" ? console.exception(e) : console.error(e);
 }
 
 </script>

@@ -1,7 +1,7 @@
 {
     "require": {
-        "https://github.com/8ctopus/sciter-logger": "0.6.3",
-        "https://github.com/8ctopus/sciter-utils": "0.6.5",
+        "https://github.com/8ctopus/sciter-logger": "0.6.4",
+        "https://github.com/8ctopus/sciter-utils": "0.6.7",
         "https://github.com/8ctopus/sciter-fontawesome": "1.0.1"
     }
 }
