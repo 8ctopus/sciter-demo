@@ -1,5 +1,7 @@
-// JSX
-// require babel syntax highlighting
+/**
+ * This source file contains JSX syntax
+ * It requires babel syntax highlighting
+ */
 
 export const dialogInfo = <info>Hello world!</info>;
 
