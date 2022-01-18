@@ -177,30 +177,28 @@ document.on("click", "button", function(event, element) {
             break;
     }
 
-    console.log("return value: ", value);
+    console.log("return value:", value);
 });
 
 /**
  * Load file into plaintext
- * @return void
  */
-async function loadcss()
-{
+async function loadcss() {
     const plaintext = document.$("plaintext");
 
     try {
-        var r = await fetch("css/window.css");
+        const r = await fetch("css/window.css");
 
         if (r.ok) {
             plaintext.value = r.text();
             return;
         }
     }
-    catch (e) {
+    catch (error) {
+        console.error(error);
+        plaintext.value = "url not found";
     }
-
-    plaintext.value = url + " not found";
-};
+}
 
 </script>
 </head>

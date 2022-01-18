@@ -60,12 +60,12 @@ document.on("ready", function() {
     // bring window to front and set input focus
     Window.this.activate(true);
 
-    //console.debug(isStrict() ? "strict js" : "loose js");
+    console.debug(isStrict() ? "strict js" : "loose js");
 
     console.debug("Document ready - OK");
 });
 
-document.on("input", "form#config", function(evt, form) {
+document.on("input", "form#config", function(event_, form) {
     // set document light/dark mode
     document.attributes["theme"] = form.value.mode;
 
@@ -88,11 +88,10 @@ document.on("input", "form#config", function(evt, form) {
 
 /**
  * Test if strict javascript is used
- * @return true if strict, false otherwise
+ * @returns {boolean} true if strict, false otherwise
  * @note https://stackoverflow.com/a/18916788/10126479
  */
-function isStrict()
-{
+function isStrict() {
     return eval("var __temp = null"), (typeof __temp === "undefined");
 }
 
