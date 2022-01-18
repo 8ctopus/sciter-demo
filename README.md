@@ -1,12 +1,13 @@
 # sciter demo
 
-This is a [sciter.js](https://sciter.com/) demo app built from multiple sciter samples.
+This is a [sciter.js](https://sciter.com/) demo app that showcases:
 
-It showcases :
-- all sciter elements (components) I could find
-- theming
+- all sciter html elements (components) I found
+- application theming
 
 ![sciter demo screenshot](screenshot.png)
+
+It's based on several sciter examples from the sciter documentation.
 
 ## demo
 
