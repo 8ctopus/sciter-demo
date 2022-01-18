@@ -41,7 +41,11 @@ Logger.init();
 // attach logger to console
 Logger.attach();
 
-document.on("ready", function() {
+document.on("ready", function(event, element) {
+    // ignore iframe ready event
+    if (element.parentElement)
+        return;
+
     // redirect logger output to plaintext
     Logger.plaintext(document.$("plaintext#logger"));
 
