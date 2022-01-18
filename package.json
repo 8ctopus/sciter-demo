@@ -21,6 +21,8 @@
   "homepage": "https://github.com/8ctopus/sciter-demo#readme",
   "devDependencies": {
     "sciter-fontawesome": "^1.0.6",
-    "sciter-sandbox": "^1.1.5"
+    "sciter-logger": "^1.1.3",
+    "sciter-sandbox": "^1.1.5",
+    "sciter-utils": "^0.7.1"
   }
 }
