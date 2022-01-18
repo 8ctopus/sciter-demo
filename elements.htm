@@ -2,7 +2,7 @@
 <head>
 <style>
 
-@import url(vendor/8ctopus/sciter-fontawesome/src/fontawesome.css);
+@import url(node_modules/sciter-fontawesome/src/fontawesome.css);
 @import url(css/controls.css);
 
 html {
@@ -110,9 +110,7 @@ video {
 </style>
 <script type="module">
 
-//import {logger} from "vendor/8ctopus/sciter-logger/src/logger.js";
-import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
-import * as dialogs from "js/dialogs.js";
+import * as Dialogs from "js/dialogs.js";
 
 document.on("ready", function() {
     // get console from iframe parent
@@ -151,19 +149,19 @@ document.on("click", "button", function(event, element) {
 
     switch (element.id) {
         case "info":
-            value = Window.this.modal(dialogs.dialogInfo);
+            value = Window.this.modal(Dialogs.dialogInfo);
             break;
 
         case "alert":
-            value = Window.this.modal(dialogs.dialogAlert);
+            value = Window.this.modal(Dialogs.dialogAlert);
             break;
 
         case "error":
-            value = Window.this.modal(dialogs.dialogError);
+            value = Window.this.modal(Dialogs.dialogError);
             break;
 
         case "question":
-            value = Window.this.modal(dialogs.dialogQuestion);
+            value = Window.this.modal(Dialogs.dialogQuestion);
             break;
 
         case "file":

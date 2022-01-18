@@ -11,7 +11,7 @@
 <title>sciter demo</title>
 <style>
 
-@import url(vendor/8ctopus/sciter-logger/src/logger.css);
+@import url(node_modules/sciter-logger/src/logger.css);
 @import url(css/controls.css);
 @import url(css/window.css);
 
@@ -29,36 +29,33 @@ plaintext#logger {
 </style>
 <script type="module">
 
-import {logger} from "vendor/8ctopus/sciter-logger/src/logger.js";
-import * as utils from "vendor/8ctopus/sciter-utils/src/utils.js";
-
-// initialize logger
-logger.init();
-
-// attach logger to console
-logger.attach();
+import Logger from "node_modules/sciter-logger/src/logger.js";
+import * as Utils from "node_modules/sciter-utils/src/utils.js";
 
 // capture unhandled exceptions
-logger.capture(unhandledExceptionHandler);
+Logger.capture();
 
-document.ready = function() {
-    // subscribe to logger messages
-    logger.plaintext(document.$("plaintext#logger"));
+// initialize logger
+Logger.init();
+
+// attach logger to console
+Logger.attach();
+
+document.on("ready", function() {
+    // redirect logger output to plaintext
+    Logger.plaintext(document.$("plaintext#logger"));
 
     // log sciter version
-    console.debug(utils.sciterInfo());
+    console.debug(Utils.sciterInfo());
 
     // add support for F5 reload
-    utils.addReloadWindow();
+    Utils.addReloadWindow();
 
     // close window on escape key press
-    utils.closeWindowOnEscape(Window.this);
+    Utils.closeWindowOnEscape(Window.this);
 
     // center window on screen
-    utils.centerWindow(Window.this, "screen");
-
-    // bring window to front
-    //utils.windowToFront(Window.this);
+    Utils.centerWindow(Window.this, "screen");
 
     // bring window to front and set input focus
     Window.this.activate(true);
@@ -66,7 +63,7 @@ document.ready = function() {
     //console.debug(isStrict() ? "strict js" : "loose js");
 
     console.debug("Document ready - OK");
-}
+});
 
 document.on("input", "form#config", function(evt, form) {
     // set document light/dark mode
@@ -97,17 +94,6 @@ document.on("input", "form#config", function(evt, form) {
 function isStrict()
 {
     return eval("var __temp = null"), (typeof __temp === "undefined");
-}
-
-/**
- * Unhandled exception handler
- * @param  Error|String e
- * @return void
- */
-function unhandledExceptionHandler(e)
-{
-    // log exception using exception if it exists, error otherwise
-    typeof console.exception === "function" ? console.exception(e) : console.error(e);
 }
 
 </script>
