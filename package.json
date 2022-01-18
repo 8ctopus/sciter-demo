@@ -1,0 +1,25 @@
+{
+  "name": "sciter-demo",
+  "version": "1.0.0",
+  "description": "sciter.js exploration of all html elements and theming",
+  "scripts": {
+    "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs cleanup",
+    "scapp": "node ./node_modules/sciter-sandbox/scripts/start.mjs scapp",
+    "usciter": "node ./node_modules/sciter-sandbox/scripts/start.mjs usciter",
+    "stop": "node ./node_modules/sciter-sandbox/scripts/stop.mjs",
+    "scapp32": "node ./node_modules/sciter-sandbox/scripts/start.mjs scapp32",
+    "usciter32": "node ./node_modules/sciter-sandbox/scripts/start.mjs usciter32"
+  },
+  "author": {
+    "name": "8ctopus",
+    "email": "hello@octopuslabs.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8ctopus/sciter-demo/issues"
+  },
+  "homepage": "https://github.com/8ctopus/sciter-demo#readme",
+  "devDependencies": {
+    "sciter-sandbox": "^1.1.5"
+  }
+}
