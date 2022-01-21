@@ -1,0 +1,54 @@
+{
+    "space": 4,
+    "semicolon": true,
+    "globals": [
+        "__DIR__",
+        "document",
+        "Window",
+        "Element",
+        "Audio",
+        "Clipboard",
+        "fetch",
+        "post",
+        "printf",
+        "scanf",
+        "JSX",
+        "getComputedStyle",
+        "requestAnimationFrame",
+        "cancelAnimationFrame",
+        "devicePixelRatio"
+    ],
+    "plugin": [
+        "html"
+    ],
+    "extension": [
+        "htm",
+        "html"
+    ],
+    "rules": {
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "capitalized-comments": [
+            "off"
+        ],
+        "spaced-comment": [
+            "off"
+        ],
+        "curly": [
+            "error",
+            "multi-or-nest"
+        ],
+        "brace-style": [
+            "error",
+            "stroustrup"
+        ],
+        "unicorn/prevent-abbreviations": [
+            "off"
+        ],
+        "space-before-function-paren": [
+            "off"
+        ]
+    }
+}
