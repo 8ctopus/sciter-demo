@@ -112,7 +112,7 @@ video {
 
 import * as Dialogs from "js/dialogs.js";
 
-document.on("ready", function() {
+document.on("ready", () => {
     // get console from iframe parent
     //logger.setConsole();
 
@@ -129,7 +129,7 @@ document.on("ready", function() {
 
     time.value = new Date();
 
-    time.timer(1000, function() {
+    time.timer(1000, () => {
         time.value = new Date();
         return true;
     });
@@ -144,7 +144,7 @@ document.on("ready", function() {
 });
 
 // set dialog buttons on click event
-document.on("click", "button", function(event, element) {
+document.on("click", "button", (event, element) => {
     let value;
 
     switch (element.id) {

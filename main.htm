@@ -41,7 +41,7 @@ Logger.init();
 // attach logger to console
 Logger.attach();
 
-document.on("ready", function(event, element) {
+document.on("ready", (event, element) => {
     // ignore iframe ready event
     if (element.parentElement)
         return;
@@ -69,9 +69,9 @@ document.on("ready", function(event, element) {
     console.debug("Document ready - OK");
 });
 
-document.on("input", "form#config", function(event_, form) {
+document.on("input", "form#config", (event_, form) => {
     // set document light/dark mode
-    document.attributes["theme"] = form.value.mode;
+    document.attributes.theme = form.value.mode;
 
     // get frame
     const frame = document.$("frame");
