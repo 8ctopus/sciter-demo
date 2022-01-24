@@ -7,7 +7,7 @@ This is a [sciter.js](https://sciter.com/) demo app that showcases:
 
 ![sciter demo screenshot](screenshot.png)
 
-It's based on several sciter examples from the sciter documentation.
+It's a personal declination from [one of the sciter examples](https://github.com/c-smile/sciter-js-sdk/tree/main/samples.sciter/themes).
 
 ## demo
 
