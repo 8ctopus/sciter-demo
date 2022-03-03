@@ -79,11 +79,8 @@ document.on("input", "form#config", (event_, form) => {
     // set frame theme
     frame.attributes["content-style"] = form.value.theme;
 
-    const url = frame.frame.document.url();
-
-    //console.debug(url);
-
     // reload frame
+    const url = frame.frame.document.url();
     frame.frame.loadFile(url);
 
     // set frame theme UI size
