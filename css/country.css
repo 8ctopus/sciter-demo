@@ -1,0 +1,59 @@
+select[type="dropdown"]#country {
+    //width: 60dip;
+    height: 25dip;
+    border: none !important;
+    border-radius: 3dip;
+    outline: none !important;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+select[type="dropdown"]#country caption {
+    width: min-content;
+
+    background-width: 40dip;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+select[type="dropdown"]#country caption[value="fr"] {
+    background-image: url("../images/flags/fr.svg");
+}
+
+select[type="dropdown"]#country caption[value="de"] {
+    background-image: url("../images/flags/de.svg");
+}
+
+select[type="dropdown"]#country caption[value="ja"] {
+    background-image: url("../images/flags/ja.svg");
+}
+
+select[type="dropdown"]#country caption[value="es"] {
+    background-image: url("../images/flags/es.svg");
+}
+
+select[type="dropdown"]#country option {
+    height: 25dip !important;
+    //padding: 0;
+
+    background-width: 40dip;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+select[type="dropdown"]#country option[value="fr"] {
+    background-image: url("../images/flags/fr.svg");
+}
+
+select[type="dropdown"]#country option[value="de"] {
+    background-image: url("../images/flags/de.svg");
+}
+
+select[type="dropdown"]#country option[value="ja"] {
+    background-image: url("../images/flags/ja.svg");
+}
+
+select[type="dropdown"]#country option[value="es"] {
+    background-image: url("../images/flags/es.svg");
+}
