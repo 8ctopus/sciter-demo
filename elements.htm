@@ -148,6 +148,7 @@ document.on("click", "button", (event, element) => {
     let value;
 
     switch (element.id) {
+        case "f1":
         case "info":
             value = Window.this.modal(Dialogs.dialogInfo);
             break;
@@ -160,6 +161,7 @@ document.on("click", "button", (event, element) => {
             value = Window.this.modal(Dialogs.dialogError);
             break;
 
+        case "f3":
         case "question":
             value = Window.this.modal(Dialogs.dialogQuestion);
             break;
@@ -206,9 +208,9 @@ async function loadcss() {
     <div .hbox>
         <p>buttons</p>
         <button>Do it!</button>
-        <button role="default-button">Default</button>
+        <button #f1 role="default-button" accesskey="!F1">Default</button>
         <button disabled>Disabled</button>
-        <button .success>Success</button>
+        <button #f3 .success accesskey="!F3">Success</button>
         <button .warning>Warning</button>
         <button .danger>Danger</button>
     </div>
