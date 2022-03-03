@@ -4,6 +4,7 @@
   "description": "sciter.js exploration of all html elements and theming",
   "scripts": {
     "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs cleanup",
+    "sdk-version": "node ./node_modules/sciter-sandbox/scripts/version.mjs",
     "scapp": "node ./node_modules/sciter-sandbox/scripts/start.mjs scapp",
     "usciter": "node ./node_modules/sciter-sandbox/scripts/start.mjs usciter",
     "stop": "node ./node_modules/sciter-sandbox/scripts/stop.mjs",
