@@ -196,8 +196,7 @@ async function loadcss() {
             plaintext.value = r.text();
             return;
         }
-    }
-    catch (error) {
+    } catch (error) {
         console.error(error);
         plaintext.value = "url not found";
     }
