@@ -1,6 +1,6 @@
 {
   "name": "sciter-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "sciter.js exploration of all html elements and theming",
   "scripts": {
     "install-sdk": "node ./node_modules/sciter-sandbox/scripts/install.mjs cleanup",
