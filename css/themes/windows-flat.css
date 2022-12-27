@@ -15,7 +15,7 @@ html:theme(dark) {
   var(back): #000;
   var(text): #fff;
   var(border): #aaa;
-  var(button-back):  #555;
+  var(button-back): #555;
   var(button-pressed-back):#444;
   var(hover-border): #eee;
   var(disabled-text): #888;
