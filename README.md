@@ -157,7 +157,7 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
     `auto` – default OS blur-behind effect;
     `ultra-dark`, `dark`, `light` and `ultra-light`
 
-``` html
+```html
 <html
     window-frame="default"
     window-title="sciter demo app"
@@ -181,7 +181,7 @@ To create a headless window use `window-frame="extended"`, then define the heade
 - `role=window-maximize` – maximize/restore button
 - `role=window-body` or `<body>` – area (four bands) between `<html>` and that body element is used for window resizing.
 
-``` html
+```html
 <head>
 ...
 </head>
