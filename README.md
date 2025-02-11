@@ -22,10 +22,6 @@ It's a personal declination from [one of the sciter examples](https://github.com
     - On Windows [download](https://nodejs.dev/download/) and run the installer
     - On Linux check the [installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-2-%E2%80%94-installing-node-js-with-apt-using-a-nodesource-ppa)
 
-### demo known issues
-
-- close the inspector before you play with the interface as inspector communication errors make the application crash.
-
 # sciter tips/caveats
 
 ## tutorials
