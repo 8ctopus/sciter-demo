@@ -140,72 +140,32 @@ menu hr {
 
 /* radio menu item */
 menu li[type="radio"] {
-	behavior: radio;
-	foreground-repeat: no-repeat;
-	foreground-position: 3dip 50%;
-	foreground-image: url(theme:radio-normal);
-}
-
-menu li[type="radio"]:hover {
-	foreground-image: url(theme:radio-hover);
-}
-
-menu li[type="radio"]:active {
-	foreground-image: url(theme:radio-pressed);
-}
-
-menu li[type="radio"]:disabled {
-	foreground-image: url(theme:radio-disabled);
+    behavior: radio;
+    foreground-repeat: no-repeat;
+    foreground-position: left 7px top 50%;
+    foreground-size: 9px;
+    foreground-image: url(stock:circle);
+    stroke: var(accent);
 }
 
 menu li[type="radio"]:checked {
-	foreground-image: url(theme:radio-checked-normal);
-}
-
-menu > li[type="radio"]:checked:hover {
-	foreground-image: url(theme:radio-checked-hover);
-}
-
-menu li[type="radio"]:checked:active {
-	foreground-image: url(theme:radio-checked-pressed);
-}
-
-menu li[type="radio"]:checked:disabled {
-	foreground-image: url(theme:radio-checked-disabled);
+    foreground-image: url(stock:disk);
+    fill: var(accent);
 }
 
 /* checkmark menu item */
 menu li[type="check"] {
-	behavior: check;
-	foreground-repeat: no-repeat;
-	foreground-position: 3dip 50%;
-	foreground-image: url(theme:check-normal);
-}
-
-menu li[type="check"]:hover {
-	foreground-image: url(theme:check-hover);
-}
-
-menu li[type="check"]:active {
-	foreground-image: url(theme:check-pressed);
-}
-
-menu li[type="check"]:disabled {
-	foreground-image: url(theme:check-disabled);
+    behavior: check;
+    foreground-repeat: no-repeat;
+    foreground-position: left 7px top 50%;
+    foreground-size: 9px;
 }
 
 menu li[type="check"]:checked {
-	foreground-image: url(theme:check-checked-normal);
+    foreground-image: url(stock:checkmark);
+    fill: var(accent);
 }
 
-menu li[type="check"]:checked:hover {
-	foreground-image: url(theme:check-checked-hover);
-}
-
-menu li[type="check"]:checked:active {
-	foreground-image: url(theme:check-checked-pressed);
-}
-
-menu li[type="check"]:checked:disabled {
-	foreground-image: url(theme:check-checked-disabled);
+menu li[type="check"]:disabled {
+    fill: grey;
 }
