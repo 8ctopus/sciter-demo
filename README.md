@@ -1,6 +1,6 @@
 # sciter demo
 
-This is a [sciter.js](https://sciter.com/) demo app that showcases:
+This is a [sciter.js](https://sciter.com/) demo that showcases:
 
 - all sciter html elements (components) I found
 - application theming
@@ -54,15 +54,15 @@ or
 </include>
 ```
 
-### [short notation](https://sciter.com/sciter-html-parsing-flavour/)
+### short notation
 
-Consider this input:
+Consider this html:
 
 ```html
 <input type="text" name="test" id="info" class="blue">info</input>
 ```
 
-in sciter there's a shorter notation:
+in sciter, there is an alternative [shorter notation](https://sciter.com/sciter-html-parsing-flavour/):
 
 ```html
 <input|text(name) #info .blue>info</input>
