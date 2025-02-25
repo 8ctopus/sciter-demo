@@ -37,7 +37,7 @@ button[type="menu"] {
 
 /* button when popup is shown */
 button[type="menu"]:owns-popup {
-	background-image: url(theme:button-pressed); /* ?? */
+    background-image: url(theme:button-pressed); /* ?? */
 }
 
 /* popup menu */
