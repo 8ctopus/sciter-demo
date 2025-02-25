@@ -7,7 +7,7 @@ This is a [sciter.js](https://sciter.com/) demo app that showcases:
 
 ![sciter demo screenshot](screenshot.png)
 
-It's a personal declination from [one of the sciter examples](https://github.com/c-smile/sciter-js-sdk/tree/main/samples.sciter/themes).
+It's a personal declination from [one of the sciter examples](https://gitlab.com/sciter-engine/sciter-js-sdk/-/tree/main/samples.sciter/themes).
 
 ## demo
 
@@ -74,7 +74,7 @@ in sciter there's a shorter notation:
 
 #### behavior
 
-[https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md/behaviors](https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md/behaviors)
+[https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md/behaviors](https://gitlab.com/sciter-engine/sciter-js-sdk/-/tree/main/docs/md/behaviors)
 
 #### input
 
