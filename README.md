@@ -30,7 +30,7 @@ It's a personal declination from [one of the sciter examples](https://github.com
 
 ## sciter docs
 
-[https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md](https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md)
+[https://gitlab.com/sciter-engine/sciter-js-sdk/-/tree/main/docs/md](https://gitlab.com/sciter-engine/sciter-js-sdk/-/tree/main/docs/md)
 
 ## html
 
