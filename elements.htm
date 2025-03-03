@@ -48,6 +48,12 @@ p {
     text-align: center;
 }
 
+input[type="number"],
+input[type="decimal"],
+input[type="integer"] {
+    min-width: 80dip;
+}
+
 checkbox#checkbox-label {
     flow: stack;
 }
@@ -223,7 +229,7 @@ async function loadcss() {
     <div .hbox>
         <p>editbox</p>
         <editbox value="foo" placeholder="input with content" maxlength=6 filter="a~z" spellcheck="yes" />
-        <editbox placeholder="input text here" />
+        <editbox placeholder="right to left" dir="rtl" />
         <editbox nullable placeholder="nullable" />
         <editbox disabled value="disabled" />
         <input|password placeholder="password" password-char="*" />
@@ -238,9 +244,11 @@ async function loadcss() {
     <div .hbox>
         <p>input|number</p>
         <input|number value="42" step="1" min="0" max="999" placeholder="number1" />
-        <input|number step="1" min="0" max="999" placeholder="number2" />
+        <input|number step="1" min="0" max="999" placeholder="number2" dir="rtl" />
         <input|number disabled step="1" min="0" max="999" />
+        decimal
         <input|decimal value="42.13" />
+        integer
         <input|integer value="42" />
     </div>
 
@@ -248,7 +256,7 @@ async function loadcss() {
         <p>radio</p>
         <!-- as="string | integer | float | numeric | auto" -->
         <radio (rgroup) checked value="true" as="string">Yes</radio>
-        <radio (rgroup) value="false" as="string">No</radio>
+        <radio (rgroup) value="false" as="string" dir="rtl">No</radio>
         <radio (rgroup) value="null" as="string">Undefined</radio>
 
         <radio (rgroupd) disabled checked value="a">Disabled (Checked)</radio>
@@ -258,7 +266,7 @@ async function loadcss() {
     <div .hbox>
         <p>checkbox</p>
         <checkbox checked>Checked</checkbox>
-        <checkbox>Unchecked</checkbox>
+        <checkbox dir="rtl">Unchecked</checkbox>
         <checkbox mixed>Mixed</checkbox>
 
         <checkbox disabled checked value="a">Disabled (Checked)</checkbox>
@@ -279,7 +287,7 @@ async function loadcss() {
 
         <hr />
         no label
-        <toggle (bar) />
+        <toggle (bar) dir="rtl" />
 
         <hr />
         group
