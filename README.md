@@ -150,7 +150,7 @@ Select elements support `multiple` and `multiple=checkmarks` attributes to allow
 - `lang` define dictionary for spellcheck ISO 639-1
 - `window-blurbehind` create windows with blur-behind effect 
 
-    `auto` – default OS blur-behind effect;
+    `auto` – default OS blur-behind effect
     `ultra-dark`, `dark`, `light` and `ultra-light`
 
 ```html
@@ -304,9 +304,9 @@ If library relies on basic DOM features it may work as it is. Example: MithrilJS
 
 If library relies on extended/obscure features then it will need either porting or an external porting layer. [see](https://sciter.com/forums/topic/supported-javascript-graph-library/#post-71280)
 
-### jquery
+### JQuery
 
-jQuery does not work in Sciter as JQuery was designed to support specific browsers, but [zepto.js](https://zeptojs.com/), a lightweight port of jQuery, works.
+JQuery does not work in Sciter as JQuery was designed to support specific browsers, but [zepto.js](https://zeptojs.com/), a lightweight port of JQuery, works.
 
 ## animations
 
