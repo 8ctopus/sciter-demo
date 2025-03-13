@@ -243,6 +243,7 @@ sciter supports css level 2.1 in full and has some css 3 features
 - css 3 `currentcolor` keyword refers to the value of the color property
 - `foreground` property
 - `appearance` property that suppresses default visual styles
+- `content-vertical-align` and `content-horizontal-align`
 
 ### all supported properties
 
